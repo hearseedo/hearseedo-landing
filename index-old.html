@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HSDOS AI — A New Journey Begins</title>
+<meta name="description" content="HSDOS AI is being reimagined. One AI Companion. One Journey. Many Worlds.">
+<meta property="og:title" content="HSDOS AI — A New Journey Begins">
+<meta property="og:description" content="One AI Companion. One Journey. Many Worlds.">
+<meta property="og:image" content="https://hsdos.ai/og-image.jpg">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #07091a;
+    --navy2:  #0c0f27;
+    --gold:   #C9A84C;
+    --gold2:  #F0C060;
+    --red:    #e01010;
+    --white:  #ffffff;
+    --pale:   rgba(255,255,255,0.72);
+    --muted:  rgba(255,255,255,0.38);
+    --dim:    rgba(255,255,255,0.18);
+    --glass:  rgba(255,255,255,0.04);
+    --glass-b: 1px solid rgba(255,255,255,0.09);
+    --gold-b:  1px solid rgba(201,168,76,0.35);
+  }
+
+  html, body {
+    min-height: 100%;
+    background: var(--navy);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── CANVAS STARFIELD ── */
+  #stars {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  }
+
+  /* ── LANG TOGGLE ── */
+  .lang-bar {
+    position: fixed; top: 20px; right: 24px; z-index: 50;
+    display: flex; background: rgba(255,255,255,0.06);
+    border: var(--glass-b); border-radius: 8px; overflow: hidden;
+  }
+  .lang-btn {
+    padding: 7px 14px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; border: none; cursor: pointer;
+    background: transparent; color: var(--muted); transition: all 0.2s;
+  }
+  .lang-btn.on { background: rgba(201,168,76,0.18); color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 80px 24px 60px;
+    text-align: center;
+  }
+
+  /* Radial glow */
+  .hero::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -56%);
+    width: min(900px, 130vw); height: min(900px, 130vw);
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, rgba(224,16,16,0.04) 40%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Blueprint orbit rings */
+  .ring {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -56%);
+    border-radius: 50%; border: 1px solid;
+    pointer-events: none;
+  }
+  .ring-1 { width: 340px; height: 340px; border-color: rgba(201,168,76,0.08); animation: orbit 30s linear infinite; }
+  .ring-2 { width: 520px; height: 520px; border-color: rgba(201,168,76,0.05); animation: orbit 50s linear infinite reverse; }
+  .ring-3 { width: 720px; height: 720px; border-color: rgba(201,168,76,0.03); animation: orbit 80s linear infinite; }
+
+  @keyframes orbit { from { transform: translate(-50%,-56%) rotate(0deg); } to { transform: translate(-50%,-56%) rotate(360deg); } }
+
+  /* Jona avatar */
+  .jona-wrap {
+    position: relative; margin-bottom: 36px;
+    animation: float 6s ease-in-out infinite;
+  }
+  .jona-glow {
+    position: absolute; inset: -24px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 70%);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  .jona-img {
+    width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+    border: 2px solid rgba(201,168,76,0.5);
+    box-shadow: 0 0 40px rgba(201,168,76,0.25), 0 0 80px rgba(201,168,76,0.1);
+    position: relative; z-index: 1;
+  }
+
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+  @keyframes glow-pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--red); margin-bottom: 10px;
+    animation: fadein 0.8s 0.2s both;
+  }
+
+  /* Headline */
+  .hero-h1 {
+    font-size: clamp(34px, 6vw, 68px); font-weight: 800;
+    line-height: 1.08; letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    animation: fadein 0.8s 0.4s both;
+  }
+  .hero-h1 .gold { color: var(--gold); }
+
+  /* Tag line */
+  .hero-tag {
+    font-size: clamp(15px, 2.2vw, 20px); font-weight: 300;
+    color: var(--pale); letter-spacing: 0.04em; margin-bottom: 12px;
+    animation: fadein 0.8s 0.6s both;
+  }
+
+  /* Jona quote */
+  .jona-quote {
+    display: inline-flex; align-items: flex-start; gap: 10px;
+    background: rgba(201,168,76,0.07); border: var(--gold-b);
+    border-radius: 12px; padding: 14px 20px;
+    max-width: 480px; margin: 0 auto 40px; text-align: left;
+    animation: fadein 0.8s 0.8s both;
+  }
+  .jona-quote-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
+    flex-shrink: 0; margin-top: 6px;
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  .jona-quote-text { font-size: 14px; color: var(--pale); line-height: 1.65; font-style: italic; }
+  .jona-quote-text strong { font-style: normal; color: var(--gold); font-weight: 600; }
+
+  /* CTAs */
+  .cta-group {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    animation: fadein 0.8s 1.0s both;
+  }
+  .btn-gold {
+    padding: 18px 52px; background: var(--gold);
+    border: none; border-radius: 50px; cursor: pointer; text-decoration: none;
+    font-size: 15px; font-weight: 700; color: #0a0700; letter-spacing: 0.03em;
+    box-shadow: 0 0 40px rgba(201,168,76,0.45), 0 4px 20px rgba(0,0,0,0.4);
+    transition: all 0.25s; display: inline-block;
+  }
+  .btn-gold:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 0 60px rgba(201,168,76,0.6), 0 8px 28px rgba(0,0,0,0.4); }
+
+  .btn-ghost {
+    padding: 15px 40px; background: var(--glass);
+    border: var(--glass-b); border-radius: 50px; cursor: pointer; text-decoration: none;
+    font-size: 14px; font-weight: 500; color: var(--pale); letter-spacing: 0.02em;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+
+  .btn-text {
+    font-size: 12px; color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 2px;
+    transition: color 0.2s; cursor: pointer; background: none; border-top: none; border-left: none; border-right: none;
+  }
+  .btn-text:hover { color: var(--pale); }
+
+  /* ── WHAT'S COMING ── */
+  .coming {
+    position: relative; z-index: 1;
+    padding: 80px 24px;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .coming-label {
+    text-align: center; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .coming-h2 {
+    text-align: center; font-size: clamp(22px, 3.5vw, 36px);
+    font-weight: 700; line-height: 1.2; margin-bottom: 12px;
+  }
+  .coming-sub {
+    text-align: center; font-size: 15px; color: var(--muted);
+    max-width: 480px; margin: 0 auto 52px; line-height: 1.7;
+  }
+  .coming-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px;
+  }
+  .coming-card {
+    background: var(--glass); border: var(--glass-b); border-radius: 20px;
+    padding: 28px 24px; position: relative; overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .coming-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .coming-card:hover { border-color: rgba(201,168,76,0.3); }
+  .coming-icon { font-size: 28px; margin-bottom: 14px; }
+  .coming-card-h { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .coming-card-p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* ── MEMBER ACCESS ── */
+  .member-bar {
+    position: relative; z-index: 1;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 56px 24px;
+    text-align: center;
+  }
+  .member-bar-h {
+    font-size: 20px; font-weight: 700; margin-bottom: 8px;
+  }
+  .member-bar-p { font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+  .member-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.09); border: var(--gold-b);
+    border-radius: 50px; padding: 5px 16px 5px 6px;
+    margin-bottom: 24px;
+  }
+  .member-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: glow-pulse 2s infinite; }
+  .member-pill-txt { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .footer {
+    position: relative; z-index: 1;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 24px; text-align: center;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px;
+  }
+  .footer a { font-size: 11px; color: var(--dim); text-decoration: none; }
+  .footer a:hover { color: var(--muted); }
+  .footer-brand { font-size: 11px; color: var(--dim); width: 100%; margin-bottom: 10px; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  /* Divider line */
+  .divider {
+    width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 48px;
+  }
+
+  /* Animations */
+  @keyframes fadein { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+  /* JP content toggle */
+  .jp { display: none; }
+  body.jp-on .en { display: none; }
+  body.jp-on .jp { display: inline; }
+  body.jp-on .jp-block { display: block; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .ring-1 { width: 240px; height: 240px; }
+    .ring-2 { width: 360px; height: 360px; }
+    .ring-3 { width: 500px; height: 500px; }
+    .coming-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<!-- Lang toggle -->
+<div class="lang-bar">
+  <button class="lang-btn on" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn"    id="btn-jp" onclick="setLang('jp')">日本語</button>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+
+  <!-- Jona -->
+  <div class="jona-wrap">
+    <div class="jona-glow"></div>
+    <img class="jona-img" src="jona.png" alt="Jona">
+  </div>
+
+  <div class="eyebrow">
+    <span class="en">HEAR SEE DO™ · OS AI</span>
+    <span class="jp">HEAR SEE DO™ · OS AI</span>
+  </div>
+
+  <h1 class="hero-h1">
+    <span class="en">HSDOS is being<br><span class="gold">reimagined.</span></span>
+    <span class="jp">HSDOSは<br><span class="gold">生まれ変わります。</span></span>
+  </h1>
+
+  <p class="hero-tag">
+    <span class="en">One AI Companion. One Journey. Many Worlds.</span>
+    <span class="jp">ひとりのAIコンパニオン。ひとつの旅。たくさんの世界。</span>
+  </p>
+
+  <div class="jona-quote">
+    <div class="jona-quote-dot"></div>
+    <p class="jona-quote-text">
+      <span class="en"><strong>Hi, I'm Jona.</strong> I'm learning too — getting ready to guide you better than ever. Your journey has been safely saved. I'll see you soon.</span>
+      <span class="jp"><strong>こんにちは、Jonaです。</strong>私も進化中です。あなたをより良くガイドするための準備をしています。あなたの学習データは安全に保存されています。もうすぐお会いしましょう。</span>
+    </p>
+  </div>
+
+  <div class="cta-group">
+    <a href="https://app.hsdos.ai" class="btn-gold">
+      <span class="en">Access Your Account →</span>
+      <span class="jp">アカウントにアクセス →</span>
+    </a>
+    <a href="https://app.hsdos.ai?mode=signup" class="btn-ghost">
+      <span class="en">New? Start Free</span>
+      <span class="jp">新規登録（無料）</span>
+    </a>
+  </div>
+</section>
+
+<!-- ── WHAT'S COMING ── -->
+<section class="coming">
+  <p class="coming-label">
+    <span class="en">What's being built</span>
+    <span class="jp">構築中の新体験</span>
+  </p>
+  <h2 class="coming-h2">
+    <span class="en">The experience you always deserved.</span>
+    <span class="jp">あなたが求めていた体験へ。</span>
+  </h2>
+  <p class="coming-sub">
+    <span class="en">We're replacing navigation with guidance. Features with journeys. Apps with Worlds.</span>
+    <span class="jp">ナビゲーションをガイダンスに。機能をジャーニーに。アプリをワールドに変えます。</span>
+  </p>
+  <div class="divider"></div>
+
+  <div class="coming-grid">
+    <div class="coming-card">
+      <div class="coming-icon">🎯</div>
+      <h3 class="coming-card-h">
+        <span class="en">Your Blueprint</span>
+        <span class="jp">あなたのブループリント</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">Jona builds a personalized path the moment you arrive. No setup. No decisions. Just your next step.</span>
+        <span class="jp">Jonaがあなただけの学習パスをすぐに作成します。設定不要。選択不要。ただ次のステップへ。</span>
+      </p>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">🌍</div>
+      <h3 class="coming-card-h">
+        <span class="en">Many Worlds</span>
+        <span class="jp">多くのワールド</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">Speak Ready. Global Ready. EIKEN. Monkey Yoga. Inner Key Blueprint. Every World unlocked — Jona guides you through them one by one.</span>
+        <span class="jp">スピークレディ、グローバルレディ、英検、モンキーヨガ、インナーキーブループリント。すべてのワールドをJonaがナビゲートします。</span>
+      </p>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">👨‍👩‍👧</div>
+      <h3 class="coming-card-h">
+        <span class="en">One Family Journey</span>
+        <span class="jp">家族で一つの旅</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">Every family member gets their own profile, their own progress, their own Worlds — all under one account.</span>
+        <span class="jp">家族全員が独自のプロフィール、進捗、ワールドを持ちながら、一つのアカウントで管理できます。</span>
+      </p>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">🔑</div>
+      <h3 class="coming-card-h">
+        <span class="en">Access Code System</span>
+        <span class="jp">アクセスコードシステム</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">Every HSDOS code ever issued remains valid. Workbook codes, school codes, event codes — all unlock the complete ecosystem.</span>
+        <span class="jp">これまでに発行されたすべてのHSDOSコードは引き続き有効です。ワークブック、学校、イベントのコードがすべてエコシステム全体を解放します。</span>
+      </p>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">⭐</div>
+      <h3 class="coming-card-h">
+        <span class="en">No Decisions Required</span>
+        <span class="jp">決断不要</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">The new home screen has one thing: Today's Mission. Jona always knows your next step. You never need to wonder where to begin.</span>
+        <span class="jp">新しいホーム画面にあるのは「今日のミッション」だけ。Jonaが常に次のステップを示します。どこから始めるか迷う必要はありません。</span>
+      </p>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">🛡️</div>
+      <h3 class="coming-card-h">
+        <span class="en">Your Progress is Safe</span>
+        <span class="jp">あなたの進捗は安全です</span>
+      </h3>
+      <p class="coming-card-p">
+        <span class="en">Your Blueprint, family, achievements, and history are all preserved. The new experience picks up exactly where you left off.</span>
+        <span class="jp">ブループリント、家族、実績、履歴はすべて保存されています。新しい体験はあなたが止まったところからすぐに再開します。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MEMBER ACCESS ── -->
+<section class="member-bar">
+  <div class="member-pill">
+    <div class="member-dot"></div>
+    <span class="member-pill-txt">
+      <span class="en">Platform live during redesign</span>
+      <span class="jp">リデザイン中も利用可能</span>
+    </span>
+  </div>
+  <h2 class="member-bar-h">
+    <span class="en">You can still access HSDOS today.</span>
+    <span class="jp">今すぐHSDOSにアクセスできます。</span>
+  </h2>
+  <p class="member-bar-p">
+    <span class="en">The current platform is open while we build the new experience. Your account, your family, your progress — all waiting for you.</span>
+    <span class="jp">新しい体験を構築中も、現在のプラットフォームはご利用いただけます。アカウント、家族、進捗 — すべてお待ちしています。</span>
+  </p>
+  <a href="https://app.hsdos.ai" class="btn-gold" style="margin-bottom:16px;display:inline-block;">
+    <span class="en">Open HSDOS →</span>
+    <span class="jp">HSDOSを開く →</span>
+  </a><br>
+  <a href="https://app.hsdos.ai/access-code" class="btn-text">
+    <span class="en">Redeem an access code</span>
+    <span class="jp">アクセスコードを入力する</span>
+  </a>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <p class="footer-brand">HEAR SEE DO™ · OS AI · Nagoya, Japan</p>
+  <a href="https://app.hsdos.ai/terms">Terms of Service</a>
+  <a href="https://app.hsdos.ai/privacy">Privacy Policy</a>
+  <a href="https://app.hsdos.ai/disclaimer">Disclaimer</a>
+  <a href="mailto:hearseedo.english@gmail.com">Contact</a>
+</footer>
+
+<script>
+// ── STARFIELD ──
+(function(){
+  var c = document.getElementById('stars');
+  var ctx = c.getContext('2d');
+  var stars = [];
+  var W, H;
+
+  function resize(){
+    W = c.width  = window.innerWidth;
+    H = c.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for(var i=0;i<200;i++){
+    stars.push({
+      x: Math.random()*2000,
+      y: Math.random()*2000,
+      r: Math.random()*1.2+0.2,
+      a: Math.random(),
+      da: (Math.random()-0.5)*0.004,
+      sp: Math.random()*0.12+0.02
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    stars.forEach(function(s){
+      s.a += s.da;
+      if(s.a<=0||s.a>=1) s.da*=-1;
+      s.x -= s.sp;
+      if(s.x<0) s.x=W;
+      ctx.beginPath();
+      ctx.arc(s.x%W, s.y%H, s.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(255,255,255,'+s.a+')';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── LANG TOGGLE ──
+function setLang(l){
+  document.body.classList.toggle('jp-on', l==='jp');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-jp').classList.toggle('on', l==='jp');
+}
+window.setLang = setLang;
+</script>
+</body>
+</html>
