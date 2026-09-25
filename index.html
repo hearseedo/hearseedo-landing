@@ -243,7 +243,9 @@
   .founder-sig .title { color: var(--gold); font-size: 11.5px; letter-spacing: 0.04em; text-transform: uppercase; }
 
   /* ── MEMBERSHIP ── */
-  .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 22px; }
+  .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 22px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .plans-afterschool { text-align: center; font-size: 13px; color: var(--pale); max-width: 560px; margin: 22px auto 0; line-height: 1.7; padding: 16px 20px; border: var(--glass-b); border-radius: 14px; background: var(--glass); }
+  .plans-afterschool strong { color: var(--gold); }
   .plan-card { background: var(--glass); border: var(--glass-b); border-radius: 20px; padding: 28px 24px; position: relative; }
   .plan-card.featured { background: rgba(201,168,76,0.06); border: var(--gold-b); }
   .plan-badge { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #0a0700;
@@ -405,9 +407,6 @@
 
       <div class="hero-ctas">
         <a href="https://app.hsdos.ai?mode=signup" class="btn-gold"><span class="en">Start Your Journey</span><span class="jp">学びを始める</span></a>
-        <button class="btn-ghost" onclick="openLightbox()" style="border:var(--glass-b);cursor:pointer;font:inherit;">
-          <span class="en">See How It Works</span><span class="jp">仕組みを見る</span>
-        </button>
         <a href="https://app.hsdos.ai/demo" class="btn-ghost" style="border:var(--glass-b);">
           <span class="en">Try the Demo</span><span class="jp">デモを試す</span>
         </a>
@@ -589,55 +588,42 @@
 <section id="membership" style="background:var(--navy2);">
   <div class="wrap">
     <div class="eyebrow"><span class="en">Membership</span><span class="jp">メンバーシップ</span></div>
-    <h2 class="h2"><span class="en">One platform. Three simple ways to join.</span><span class="jp">ひとつのプラットフォーム。3つのシンプルな参加方法。</span></h2>
-    <p class="lede"><span class="en">Choose the membership that fits your journey.</span><span class="jp">あなたに合ったメンバーシップをお選びください。</span></p>
+    <h2 class="h2"><span class="en">One platform. One membership.</span><span class="jp">ひとつのプラットフォーム。ひとつのメンバーシップ。</span></h2>
+    <p class="lede"><span class="en">Join HSD OS AI — with a lifetime discount for Founding Members.</span><span class="jp">HSD OS AIに参加する。創設メンバーには永年割引。</span></p>
 
     <div class="plans-grid">
       <div class="plan-card">
-        <div class="plan-sub"><span class="en">For one learner</span><span class="jp">1人で学ぶ方へ</span></div>
-        <div class="plan-name">Individual</div>
-        <div class="plan-price"><span class="cur">¥</span>2,480<span class="per"> / <span class="en">mo</span><span class="jp">月</span></span></div>
-        <div class="plan-yearly"><span class="en">or ¥19,800 / year</span><span class="jp">年払い ¥19,800</span></div>
+        <div class="plan-sub"><span class="en">One membership, the whole platform</span><span class="jp">1つのメンバーシップで、すべてのプラットフォームへ</span></div>
+        <div class="plan-name">Standard Membership</div>
+        <div class="plan-price"><span class="cur">¥</span>3,000<span class="per"> / <span class="en">mo</span><span class="jp">月</span></span></div>
+        <div class="plan-yearly"><span class="en">or ¥30,000 / year · about 2 months free</span><span class="jp">年払い ¥30,000・約2か月分お得</span></div>
         <ul class="plan-features">
-          <li><span class="mark">✓</span><span><span class="en">Personalised learning</span><span class="jp">一人ひとりに合った学習</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">AI guidance</span><span class="jp">AIによるサポート</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">Full access to HSD OS AI</span><span class="jp">HSD OS AI フルアクセス</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">Jona AI guidance</span><span class="jp">AI「ジョナ」によるサポート</span></span></li>
           <li><span class="mark">✓</span><span><span class="en">Progress tracking</span><span class="jp">進捗確認</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Access to included learning experiences</span><span class="jp">対象学習コンテンツへのアクセス</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">Experiences and pathways according to your account</span><span class="jp">アカウントに応じた学習体験・パスウェイ</span></span></li>
         </ul>
-        <a href="https://app.hsdos.ai/plans" class="plan-btn"><span class="en">Choose Individual</span><span class="jp">Individualを選ぶ</span></a>
+        <a href="https://app.hsdos.ai/plans" class="plan-btn"><span class="en">Choose Standard</span><span class="jp">スタンダードを選ぶ</span></a>
       </div>
 
       <div class="plan-card featured">
-        <div class="plan-badge"><span class="en">Best Value</span><span class="jp">おすすめ</span></div>
-        <div class="plan-sub"><span class="en">For parents and children</span><span class="jp">保護者と子どものために</span></div>
-        <div class="plan-name">Family</div>
-        <div class="plan-price"><span class="cur">¥</span>3,980<span class="per"> / <span class="en">mo</span><span class="jp">月</span></span></div>
-        <div class="plan-yearly"><span class="en">or ¥34,800 / year · up to 5 members</span><span class="jp">年払い ¥34,800・最大5名</span></div>
+        <div class="plan-badge"><span class="en">Founding Member</span><span class="jp">創設メンバー</span></div>
+        <div class="plan-sub"><span class="en">15% lifetime founder discount</span><span class="jp">創設メンバー永年15%割引</span></div>
+        <div class="plan-name">Founding Member</div>
+        <div class="plan-price"><span class="cur">¥</span>2,550<span class="per"> / <span class="en">mo</span><span class="jp">月</span></span></div>
+        <div class="plan-yearly"><span class="en">or ¥25,500 / year</span><span class="jp">年払い ¥25,500</span></div>
         <ul class="plan-features">
-          <li><span class="mark">✓</span><span><span class="en">Multiple family profiles</span><span class="jp">複数の家族プロフィール</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Shared learning activities</span><span class="jp">家族で楽しめる学習</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Family progress</span><span class="jp">家族の進捗確認</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Learning together at home</span><span class="jp">家庭で一緒に学べる活動</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">Everything in Standard Membership</span><span class="jp">スタンダードの全内容</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">15% off, locked in for life</span><span class="jp">15%オフが永年ロック</span></span></li>
+          <li><span class="mark">✓</span><span><span class="en">Rate stays locked as long as your membership stays active</span><span class="jp">メンバーシップが継続する限り、この価格が維持されます</span></span></li>
         </ul>
-        <a href="https://app.hsdos.ai/plans" class="plan-btn"><span class="en">Choose Family</span><span class="jp">Familyを選ぶ</span></a>
-      </div>
-
-      <div class="plan-card">
-        <div class="plan-sub"><span class="en">For university students and future-ready learners</span><span class="jp">大学生と未来に備える学習者へ</span></div>
-        <div class="plan-name">University+</div>
-        <div class="plan-price"><span class="cur">¥</span>4,980<span class="per"> / <span class="en">mo</span><span class="jp">月</span></span></div>
-        <div class="plan-yearly"><span class="en">or ¥49,800 / year</span><span class="jp">年払い ¥49,800</span></div>
-        <ul class="plan-features">
-          <li><span class="mark">✓</span><span><span class="en">Career preparation</span><span class="jp">キャリア準備</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Global communication</span><span class="jp">グローバルコミュニケーション</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">Speaking practice</span><span class="jp">スピーキング練習</span></span></li>
-          <li><span class="mark">✓</span><span><span class="en">University learning experiences</span><span class="jp">大学生向け学習体験</span></span></li>
-        </ul>
-        <a href="https://app.hsdos.ai/plans" class="plan-btn"><span class="en">Choose University+</span><span class="jp">University+を選ぶ</span></a>
+        <a href="https://app.hsdos.ai/plans" class="plan-btn"><span class="en">Claim Founding Rate</span><span class="jp">創設メンバー価格を選ぶ</span></a>
       </div>
     </div>
 
-    <p class="plans-note"><span class="en">All plans provide access to HSD OS AI. Included experiences and account features depend on the selected membership.</span><span class="jp">すべてのプランでHSD OS AIをご利用いただけます。利用できる学習体験やアカウント機能は、選択したメンバーシップによって異なります。</span></p>
+    <p class="plans-note"><span class="en">One HSD journey. One connected platform. Your membership gives you access to HSD OS AI, with experiences and pathways available according to your account and membership.</span><span class="jp">ひとつのHSDの旅。ひとつのつながったプラットフォーム。メンバーシップにより、アカウントとメンバーシップ内容に応じた学習体験・パスウェイにアクセスできます。</span></p>
+
+    <p class="plans-afterschool"><span class="en"><strong>Already learning with Hear See Do?</strong><br>Eligible HSD afterschool families can add HSD OS AI for ¥1,500/month.</span><span class="jp"><strong>すでにHear See Doで学んでいますか？</strong><br>対象のHSDアフタースクールご利用家庭は、月額¥1,500でHSD OS AIを追加できます。</span></p>
   </div>
 </section>
 
@@ -655,9 +641,9 @@
     </h2>
     <div class="hero-ctas" style="justify-content:center;">
       <a href="https://app.hsdos.ai?mode=signup" class="btn-gold"><span class="en">Start Your Journey</span><span class="jp">学びを始める</span></a>
-      <button class="btn-ghost" onclick="openLightbox()" style="border:var(--glass-b);cursor:pointer;font:inherit;">
-        <span class="en">See How It Works</span><span class="jp">仕組みを見る</span>
-      </button>
+      <a href="https://app.hsdos.ai/demo" class="btn-ghost">
+        <span class="en">Try the Demo</span><span class="jp">デモを試す</span>
+      </a>
     </div>
   </div>
 </section>
