@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HSD OS AI | Confidence-First Learning for Real Life</title>
-<meta name="description" content="HSD OS AI helps children, families, students, adults, and educators build the confidence to use what they learn in real life.">
-<meta property="og:title" content="HSD OS AI | Confidence-First Learning for Real Life">
-<meta property="og:description" content="HSD OS AI helps children, families, students, adults, and educators build the confidence to use what they learn in real life.">
+<title>HSDOS.AI | One family. Different journeys. Growing in confidence together.</title>
+<meta name="description" content="HSDOS.AI brings the family together through learning: English experiences for children, students and adults, built on one shared approach — Hear, See, Do, Confidence.">
+<meta property="og:title" content="HSDOS.AI | Confidence-First Learning for Real Life">
+<meta property="og:description" content="HSDOS.AI brings the family together through learning: English experiences for children, students and adults, built on one shared approach — Hear, See, Do, Confidence.">
 <meta property="og:image" content="https://hsdos.ai/og-image.jpg">
 <link rel="preload" as="image" href="images/landing/01-landing-hero-nagoya-monkeys.webp" media="(min-width: 769px)">
 <link rel="preload" as="image" href="images/landing/02-landing-hero-mobile.webp" media="(max-width: 768px)">
@@ -366,6 +366,64 @@
     .benefit-row { gap: 12px; }
     .final-cta { min-height: calc(100vw * 887 / 1774); }
   }
+
+  /* ── Family-first additions (2026-11) ── */
+  .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; margin-bottom:22px; }
+  .pill { padding:8px 14px; border-radius:999px; border:var(--glass-b); background:var(--glass); font-size:14px; color:var(--white); text-decoration:none; }
+  .journey-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:8px; }
+  .journey-card { background:var(--glass); border:var(--glass-b); border-radius:20px; padding:26px 22px; display:flex; flex-direction:column; gap:10px; }
+  .journey-card .j-icon { font-size:34px; }
+  .journey-card .j-kicker { font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .journey-card h3 { font-size:22px; line-height:1.25; }
+  .journey-card p { font-size:15.5px; color:var(--pale); line-height:1.65; }
+  .journey-card ul { list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:4px; }
+  .journey-card li { font-size:15px; color:var(--pale); line-height:1.55; padding-left:18px; position:relative; }
+  .journey-card li::before { content:"•"; color:var(--gold); position:absolute; left:2px; }
+  .status-tag { margin-top:auto; font-size:13px; line-height:1.5; color:var(--muted); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px; }
+  .family-note { max-width:760px; margin:28px auto 0; text-align:center; font-size:15.5px; color:var(--pale); line-height:1.7; }
+  .life-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:8px; }
+  .life-card { background:var(--glass); border:var(--glass-b); border-radius:16px; padding:20px 20px; font-size:16px; line-height:1.65; color:var(--pale); }
+  .life-card strong { display:block; color:var(--white); margin-bottom:4px; font-size:17px; }
+  .life-disclaimer { text-align:center; font-size:13px; color:var(--muted); margin-top:18px; }
+  .method-note { max-width:720px; margin:34px auto 0; text-align:center; font-size:17px; line-height:1.75; color:var(--pale); }
+  .method-note strong { color:var(--gold); }
+  .founding-box { max-width:640px; margin:0 auto; background:rgba(201,168,76,0.07); border:var(--gold-b); border-radius:22px; padding:34px 26px; text-align:center; }
+  .founding-price { font-size:clamp(40px,8vw,56px); font-weight:800; color:var(--gold); line-height:1.1; }
+  .founding-price small { font-size:18px; color:var(--pale); font-weight:600; }
+  .founding-line { font-size:18px; margin-top:6px; }
+  .founding-body { font-size:16px; color:var(--pale); line-height:1.7; margin-top:16px; }
+  .founding-list { list-style:none; text-align:left; display:inline-flex; flex-direction:column; gap:8px; margin:18px 0 6px; }
+  .founding-list li { font-size:15.5px; color:var(--pale); line-height:1.55; padding-left:22px; position:relative; }
+  .founding-list li::before { content:"✓"; color:var(--gold); position:absolute; left:0; }
+  .founding-split { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0 4px; }
+  .founding-split > div { background:rgba(10,16,40,0.55); border:var(--gold-b); border-radius:14px; padding:14px 10px; }
+  .founding-split .lbl { font-size:13.5px; color:var(--pale); line-height:1.4; }
+  .founding-split .amt { font-size:clamp(26px,6vw,34px); font-weight:800; color:var(--gold); line-height:1.15; margin-top:4px; }
+  .founding-split .sub { font-size:12.5px; color:var(--muted); margin-top:2px; }
+  .founding-forever { display:inline-block; margin-top:20px; padding:10px 22px; border-radius:999px; background:var(--gold); color:#0b1230; font-weight:800; font-size:18px; }
+  .fam-modal { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:16px; background:rgba(5,8,24,0.8); }
+  .fam-modal.open { display:flex; }
+  .fam-card { width:100%; max-width:460px; max-height:92vh; overflow:auto; background:#0c0f27; border:var(--gold-b); border-radius:20px; padding:26px 22px; position:relative; }
+  .fam-card h3 { font-size:22px; margin:0 28px 6px 0; }
+  .fam-card p.sub { font-size:14px; color:var(--pale); line-height:1.6; margin:0 0 14px; }
+  .fam-card label { display:block; font-size:13.5px; color:var(--pale); margin:12px 0 4px; }
+  .fam-card input[type=text], .fam-card input[type=email], .fam-card textarea { width:100%; box-sizing:border-box; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.25); background:rgba(255,255,255,0.06); color:#fff; font:inherit; font-size:16px; }
+  .fam-card textarea { min-height:84px; resize:vertical; }
+  .fam-card .hp { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+  .fam-x { position:absolute; top:10px; right:12px; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; line-height:1; padding:6px; }
+  .fam-err { color:#ffb4b4; font-size:14px; margin-top:12px; display:none; line-height:1.55; }
+  .fam-ok { display:none; text-align:center; padding:8px 0; }
+  .fam-ok .tick { font-size:42px; color:var(--gold); }
+  .fam-card .btn-gold { width:100%; margin-top:18px; padding:15px 20px; }
+  .founding-motto { font-style:italic; color:var(--gold); margin-top:18px; }
+  .founding-fine { font-size:13.5px; color:var(--muted); line-height:1.65; margin-top:14px; }
+  .founding-actions { display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:22px; }
+  .founding-actions .btn-gold { max-width:100%; text-align:center; }
+  .founding-actions .alt { font-size:15px; color:var(--pale); }
+  .founding-actions .alt a { color:var(--gold); }
+  @media (max-width: 1240px) { .main-nav a[href="#membership"], .main-nav a[href="https://app.hsdos.ai"] { display:none; } }
+  @media (max-width: 900px) { .journey-grid { grid-template-columns:1fr; } .life-grid { grid-template-columns:1fr; } }
+  @media (max-width: 480px) { .btn-gold, .btn-ghost { padding-left:22px; padding-right:22px; } .founding-box { padding:26px 18px; } }
 </style>
 </head>
 <body>
@@ -376,8 +434,9 @@
 <header class="site-header">
   <a href="#top" class="brand">HSD<span class="dot">.</span> <span class="sub">OS AI</span></a>
   <nav class="main-nav">
+    <a href="#family-pathways"><span class="en">For Your Family</span><span class="jp">ご家族のために</span></a>
     <a href="#how-it-works"><span class="en">How It Works</span><span class="jp">仕組み</span></a>
-    <a href="#who-its-for"><span class="en">Who It's For</span><span class="jp">対象</span></a>
+    <a href="#founding"><span class="en">Founding Families</span><span class="jp">ファウンディング・ファミリー</span></a>
     <a href="#membership"><span class="en">Membership</span><span class="jp">メンバーシップ</span></a>
     <a href="#founder"><span class="en">About</span><span class="jp">について</span></a>
     <a href="https://app.hsdos.ai"><span class="en">Resources</span><span class="jp">リソース</span></a>
@@ -387,9 +446,9 @@
       <button class="lang-btn on" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-jp" onclick="setLang('jp')">日本語</button>
     </div>
-    <a href="https://app.hsdos.ai/demo" class="btn-login demo-link"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
+    <a href="https://hsdos-demo.netlify.app/demo" class="btn-login demo-link"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
     <a href="https://app.hsdos.ai" class="btn-login"><span class="en">Login</span><span class="jp">ログイン</span></a>
-    <a href="https://app.hsdos.ai?mode=signup" class="btn-red"><span class="en">Start Your Journey</span><span class="jp">学びを始める</span></a>
+    <button type="button" class="btn-red js-request-access"><span class="en">Request Access</span><span class="jp">申し込む</span></button>
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
@@ -397,11 +456,12 @@
 </header>
 
 <div class="mobile-nav" id="mobileNav">
+  <a href="#family-pathways" onclick="toggleMobileNav()"><span class="en">For Your Family</span><span class="jp">ご家族のために</span></a>
+  <a href="#founding" onclick="toggleMobileNav()"><span class="en">Founding Families</span><span class="jp">ファウンディング・ファミリー</span></a>
   <a href="#how-it-works" onclick="toggleMobileNav()"><span class="en">How It Works</span><span class="jp">仕組み</span></a>
-  <a href="#who-its-for" onclick="toggleMobileNav()"><span class="en">Who It's For</span><span class="jp">対象</span></a>
   <a href="#membership" onclick="toggleMobileNav()"><span class="en">Membership</span><span class="jp">メンバーシップ</span></a>
   <a href="#founder" onclick="toggleMobileNav()"><span class="en">About</span><span class="jp">について</span></a>
-  <a href="https://app.hsdos.ai/demo"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
+  <a href="https://hsdos-demo.netlify.app/demo"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
   <a href="https://app.hsdos.ai"><span class="en">Login</span><span class="jp">ログイン</span></a>
 </div>
 
@@ -422,31 +482,38 @@
         <span><span class="en">Hear it. See it. Do it.</span><span class="jp">聞く。見る。やってみる。</span></span>
       </div>
 
-      <div class="eyebrow-left">HEAR SEE DO™ · OS AI</div>
+      <div class="eyebrow-left">HSDOS.AI · HEAR SEE DO™</div>
       <h1 class="hero-h1">
-        <span class="en">Learning doesn't need to feel <span class="gold">complicated.</span></span>
-        <span class="jp">学びは、もっと<span class="gold">シンプルでいい。</span></span>
+        <span class="en">One family. Different journeys. <span class="gold">Growing in confidence together.</span></span>
+        <span class="jp">ひとつの家族。それぞれの歩み。<span class="gold">一緒に、自信を育てていく。</span></span>
       </h1>
       <p class="hero-desc">
-        <span class="en">Tell us who is learning and what they want to achieve. HSD OS AI guides the next step.</span>
-        <span class="jp">誰が、何を学びたいのかを教えてください。HSD OS AIが、次の一歩をご案内します。</span>
+        <span class="en">From your child’s first English words to a teenager finding their voice and an adult building confidence in conversation, HSDOS.AI brings learning together for the whole family.</span>
+        <span class="jp">お子さまの最初の英語から、自分の声を見つけていく10代、会話に自信をつけたい大人まで。HSDOS.AIは、ご家族みんなの学びをひとつにつなげます。</span>
       </p>
       <p class="hero-desc2">
-        <span class="en">Hear it. See it. Do it. Build the confidence to use it in real life.</span>
-        <span class="jp">聞く。見る。やってみる。実生活で使える自信につなげます。</span>
+        <span class="en">Confidence First. Humanity Always.</span>
+        <span class="jp">Confidence First. Humanity Always.（自信が先。人のあたたかさは、いつも。）</span>
       </p>
 
       <div class="hero-ctas">
-        <a href="https://app.hsdos.ai?mode=signup" class="btn-gold"><span class="en">Start Your Journey</span><span class="jp">学びを始める</span></a>
-        <a href="https://app.hsdos.ai/demo" class="btn-ghost" style="border:var(--glass-b);">
-          <span class="en">Try the Demo</span><span class="jp">デモを試す</span>
+        <a href="#family-pathways" class="btn-gold">
+          <span class="en">Explore learning for your family</span><span class="jp">ご家族の学びを見る</span>
         </a>
+        <a href="#how-it-works" class="btn-ghost" style="border:var(--glass-b);">
+          <span class="en">See how it works</span><span class="jp">仕組みを見る</span>
+        </a>
+      </div>
+      <div class="pill-row" aria-label="Who HSDOS.AI is for">
+        <a class="pill" href="#family-pathways">🧒 <span class="en">Children</span><span class="jp">子ども</span></a>
+        <a class="pill" href="#family-pathways">🎓 <span class="en">Students</span><span class="jp">学生</span></a>
+        <a class="pill" href="#family-pathways">💼 <span class="en">Adults</span><span class="jp">大人</span></a>
       </div>
 
       <div class="benefit-row">
         <div class="benefit"><span class="dot2"></span><span class="en">Confidence</span><span class="jp">自信</span></div>
-        <div class="benefit"><span class="dot2"></span><span class="en">Real Skills</span><span class="jp">実践力</span></div>
-        <div class="benefit"><span class="dot2"></span><span class="en">AI Guidance</span><span class="jp">AIサポート</span></div>
+        <div class="benefit"><span class="dot2"></span><span class="en">Real-life English</span><span class="jp">実生活の英語</span></div>
+        <div class="benefit"><span class="dot2"></span><span class="en">Human connection</span><span class="jp">人とのつながり</span></div>
       </div>
     </div>
   </div>
@@ -455,9 +522,9 @@
 <!-- ── PROBLEM / DIFFERENCE ── -->
 <section id="why">
   <div class="wrap">
-    <div class="eyebrow"><span class="en">Why HSD OS AI</span><span class="jp">なぜHSD OS AIなのか</span></div>
+    <div class="eyebrow"><span class="en">Why HSDOS.AI</span><span class="jp">なぜHSDOS.AIなのか</span></div>
     <h2 class="h2"><span class="en">Knowing is not enough. Using it changes everything.</span><span class="jp">知っているだけでは足りません。使うことがすべてを変えます。</span></h2>
-    <p class="lede"><span class="en">Most platforms measure whether learners know the answer. HSD OS AI helps them build the confidence to use what they know.</span><span class="jp">多くの学習サービスは、答えを知っているかを測ります。HSD OS AIは、知っていることを実際に使う自信を育てます。</span></p>
+    <p class="lede"><span class="en">HSDOS.AI helps learners build the confidence to use what they know, not only to recognise the right answer.</span><span class="jp">HSDOS.AIは、正しい答えを知っているだけでなく、知っていることを使える自信を育てます。</span></p>
 
     <div class="section-banner" style="aspect-ratio:1448/1086;">
       <img src="images/landing/03-why-confidence-action.webp" width="1448" height="1086" loading="lazy"
@@ -466,7 +533,7 @@
 
     <div class="compare-grid">
       <div class="compare-card old">
-        <div class="compare-h"><span class="en">Traditional Learning</span><span class="jp">従来の学び</span></div>
+        <div class="compare-h"><span class="en">Learning by memorising</span><span class="jp">暗記中心の学び</span></div>
         <ul class="compare-list">
           <li><span class="mark">✕</span><span class="en">Memorise</span><span class="jp">覚える</span></li>
           <li><span class="mark">✕</span><span class="en">Tap</span><span class="jp">タップする</span></li>
@@ -476,7 +543,7 @@
         </ul>
       </div>
       <div class="compare-card new">
-        <div class="compare-h"><span class="en">HSD OS AI Learning</span><span class="jp">HSD OS AIの学び</span></div>
+        <div class="compare-h"><span class="en">Learning with HSDOS.AI</span><span class="jp">HSDOS.AIの学び</span></div>
         <ul class="compare-list">
           <li><span class="mark">✓</span><span class="en">Hear</span><span class="jp">聞く</span></li>
           <li><span class="mark">✓</span><span class="en">See</span><span class="jp">見る</span></li>
@@ -507,7 +574,7 @@
       <div class="step-card">
         <div class="step-num">2</div>
         <div class="step-h"><span class="en">Get guided to the right path</span><span class="jp">自分に合った学び方へ</span></div>
-        <div class="step-p"><span class="en">HSD OS AI creates a personalised path and suggests the best next step.</span><span class="jp">HSD OS AIが、最適な学習の流れと次のステップをご案内します。</span></div>
+        <div class="step-p"><span class="en">HSDOS.AI creates a personalised path and suggests the best next step.</span><span class="jp">HSDOS.AIが、最適な学習の流れと次のステップをご案内します。</span></div>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
@@ -519,41 +586,77 @@
 </section>
 
 <!-- ── WHO IT'S FOR ── -->
-<section id="who-its-for">
+<section id="family-pathways">
   <div class="wrap">
-    <h2 class="h2"><span class="en">Designed for every kind of learner.</span><span class="jp">すべての学ぶ人のために。</span></h2>
-    <div class="divider"></div>
+    <div class="eyebrow"><span class="en">For the whole family</span><span class="jp">ご家族みんなのために</span></div>
+    <h2 class="h2"><span class="en">Three journeys. One shared approach.</span><span class="jp">3つの歩み。ひとつの考え方。</span></h2>
+    <p class="lede"><span class="en">HSDOS.AI brings the family together through learning while giving each person room to grow. Every journey follows the same Hear → See → Do → Confidence approach.</span><span class="jp">HSDOS.AIは、ご家族を学びでつなぎながら、ひとりひとりが成長できる余白を大切にします。どの歩みも、聞く → 見る → やってみる → 自信、という同じ考え方に基づいています。</span></p>
     <div class="section-banner" style="aspect-ratio:1586/992;">
       <img src="images/landing/04-all-levels-community.webp" width="1586" height="992" loading="lazy"
            alt="Children, families, students, adults and educators learning together">
     </div>
-    <div class="audience-grid">
-      <div class="audience-card">
-        <div class="audience-icon">🧒</div>
-        <div class="audience-h"><span class="en">Children</span><span class="jp">子ども</span></div>
-        <div class="audience-p"><span class="en">Build early skills with confidence.</span><span class="jp">楽しみながら、基礎力と自信を育てます。</span></div>
-      </div>
-      <div class="audience-card">
-        <div class="audience-icon">👨‍👩‍👧</div>
-        <div class="audience-h"><span class="en">Families</span><span class="jp">ファミリー</span></div>
-        <div class="audience-p"><span class="en">Learn together and grow together.</span><span class="jp">一緒に学び、一緒に成長します。</span></div>
-      </div>
-      <div class="audience-card">
-        <div class="audience-icon">🎓</div>
-        <div class="audience-h"><span class="en">Students</span><span class="jp">学生</span></div>
-        <div class="audience-p"><span class="en">Prepare for school, study, work, and the world.</span><span class="jp">学校、進学、仕事、世界への準備を支えます。</span></div>
-      </div>
-      <div class="audience-card">
-        <div class="audience-icon">💼</div>
-        <div class="audience-h"><span class="en">Adults</span><span class="jp">大人</span></div>
-        <div class="audience-p"><span class="en">Learn for life, work, and personal growth.</span><span class="jp">日常、仕事、自己成長につながる学びを。</span></div>
-      </div>
-      <div class="audience-card">
-        <div class="audience-icon">📘</div>
-        <div class="audience-h"><span class="en">Educators</span><span class="jp">教育関係者</span></div>
-        <div class="audience-p"><span class="en">Support learners with clearer tools and insights.</span><span class="jp">学習者を支える、分かりやすいツールと情報を提供します。</span></div>
-      </div>
+
+    <div class="journey-grid">
+      <article class="journey-card">
+        <div class="j-icon" aria-hidden="true">🧒</div>
+        <div class="j-kicker"><span class="en">Children</span><span class="jp">子ども</span></div>
+        <h3><span class="en">Discover and try</span><span class="jp">見つけて、やってみる</span></h3>
+        <p><span class="en">English begins with play: movement, phonics, stories and speaking out loud.</span><span class="jp">英語は遊びから。体を動かし、フォニックスに触れ、お話を楽しみ、声に出してみます。</span></p>
+        <ul>
+          <li><span class="en"><strong>Monkey Yoga Phonics</strong> — move like the monkeys and say the words aloud.</span><span class="jp"><strong>Monkey Yoga Phonics</strong> — モンキーのポーズをまねして、言葉を声に出します。</span></li>
+          <li><span class="en">Short guided activities for parent and child to do together.</span><span class="jp">保護者とお子さまが一緒にできる、短いガイド付きアクティビティ。</span></li>
+        </ul>
+        <div class="status-tag"><span class="en">Available now in our invitation-only family beta. Not yet open to the public.</span><span class="jp">現在、招待制のファミリーベータでご利用いただけます。一般公開はまだです。</span></div>
+      </article>
+
+      <article class="journey-card">
+        <div class="j-icon" aria-hidden="true">🎓</div>
+        <div class="j-kicker"><span class="en">Students</span><span class="jp">学生</span></div>
+        <h3><span class="en">Find your voice</span><span class="jp">自分の声を見つける</span></h3>
+        <p><span class="en">Build confidence in communication and in learning independently, one real attempt at a time.</span><span class="jp">伝える自信と、自分で学ぶ力を、ひとつひとつの挑戦を通して育てます。</span></p>
+        <ul>
+          <li><span class="en"><strong>EIKEN practice</strong> with the HSD monkeys.</span><span class="jp"><strong>英検の練習</strong>（HSDのモンキーと一緒に）。</span></li>
+          <li><span class="en">Speaking practice that starts with your own ideas.</span><span class="jp">自分の考えを話すことから始めるスピーキング練習。</span></li>
+        </ul>
+        <div class="status-tag"><span class="en">In private beta for invited accounts. Student access is being opened step by step.</span><span class="jp">招待されたアカウント向けにプライベートベータ中です。学生向けは段階的に開放していきます。</span></div>
+      </article>
+
+      <article class="journey-card">
+        <div class="j-icon" aria-hidden="true">💼</div>
+        <div class="j-kicker"><span class="en">Adults</span><span class="jp">大人</span></div>
+        <h3><span class="en">Keep growing</span><span class="jp">学び続ける</span></h3>
+        <p><span class="en">Make space for conversation, your own interests, and learning that fits into everyday life.</span><span class="jp">会話の時間と、自分の興味、そして日々の暮らしに合う学びの場をつくります。</span></p>
+        <ul>
+          <li><span class="en"><strong>Sip Speak Learn</strong> — relaxed conversation practice.</span><span class="jp"><strong>Sip Speak Learn</strong> — リラックスして会話を練習。</span></li>
+          <li><span class="en"><strong>Speak Ready</strong> — practise speaking with support.</span><span class="jp"><strong>Speak Ready</strong> — サポートを受けながらスピーキングを練習。</span></li>
+        </ul>
+        <div class="status-tag"><span class="en">In private beta for invited accounts. Adult access is being opened step by step.</span><span class="jp">招待されたアカウント向けにプライベートベータ中です。大人向けは段階的に開放していきます。</span></div>
+      </article>
     </div>
+
+    <p class="family-note" style="margin-top:18px">
+      <span class="en">Educators are part of the picture too: HSDOS.AI offers clearer tools and insights to support the learners they teach.</span>
+      <span class="jp">教育関係者の方も大切な存在です。HSDOS.AIは、教える学習者を支える、分かりやすいツールと情報を提供します。</span>
+    </p>
+    <p class="family-note">
+      <span class="en"><strong>How the Family membership fits in.</strong> The founding Family membership opens the Family pathway and the apps included in the Family plan. Other pathways are opened gradually and are not automatically part of every membership; we will tell you exactly what your account includes before you pay.</span>
+      <span class="jp"><strong>ファミリー会員について。</strong>ファウンディング・ファミリー会員では、ファミリーのパスウェイと、ファミリープランに含まれるアプリをご利用いただけます。その他のパスウェイは順次開放しており、すべての会員に自動的に含まれるわけではありません。お支払い前に、ご自身のアカウントに含まれる内容を明確にお伝えします。</span>
+    </p>
+  </div>
+</section>
+
+<section id="family-life" style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Everyday life</span><span class="jp">毎日の暮らしの中で</span></div>
+    <h2 class="h2"><span class="en">Learning becomes part of family life.</span><span class="jp">学びが、家族の時間になる。</span></h2>
+    <p class="lede"><span class="en">A few examples of how families can use HSDOS.AI.</span><span class="jp">ご家族での使い方の例です。</span></p>
+    <div class="life-grid">
+      <div class="life-card"><strong><span class="en">A monkey movement, said out loud</span><span class="jp">モンキーの動きを、声に出して</span></strong><span class="en">A child practises a monkey movement and says the words aloud as they move.</span><span class="jp">お子さまがモンキーのポーズをしながら、言葉を声に出して言ってみます。</span></div>
+      <div class="life-card"><strong><span class="en">A parent joins in</span><span class="jp">保護者も一緒に</span></strong><span class="en">A parent joins a short speaking activity, and learning happens together.</span><span class="jp">保護者が短いスピーキング活動に加わり、一緒に学びます。</span></div>
+      <div class="life-card"><strong><span class="en">A student’s own ideas</span><span class="jp">学生の、自分の考え</span></strong><span class="en">A student practises expressing their own ideas, not just repeating answers.</span><span class="jp">学生が、答えをなぞるのではなく、自分の考えを言葉にする練習をします。</span></div>
+      <div class="life-card"><strong><span class="en">Time for an adult to grow</span><span class="jp">大人の学びの時間</span></strong><span class="en">An adult makes time for their own learning, in conversation and at their own pace.</span><span class="jp">大人が、自分のペースで会話を通した自分のための学びの時間をつくります。</span></div>
+    </div>
+    <p class="life-disclaimer"><span class="en">These are examples of use, not customer stories.</span><span class="jp">これらは使い方の例であり、お客さまの声ではありません。</span></p>
   </div>
 </section>
 
@@ -567,25 +670,29 @@
       <div class="method-step" data-reveal>
         <div class="method-icon-wrap">👂</div>
         <div class="method-h"><span class="en">Hear</span><span class="jp">聞く</span></div>
-        <div class="method-p"><span class="en">Listen and understand.</span><span class="jp">聞いて、理解する。</span></div>
+        <div class="method-p"><span class="en">Listen and discover.</span><span class="jp">聞いて、見つける。</span></div>
       </div>
       <div class="method-step" data-reveal>
         <div class="method-icon-wrap">👁️</div>
         <div class="method-h"><span class="en">See</span><span class="jp">見る</span></div>
-        <div class="method-p"><span class="en">Connect ideas to examples and real situations.</span><span class="jp">例や実際の場面と結びつける。</span></div>
+        <div class="method-p"><span class="en">Connect words with meaning.</span><span class="jp">言葉を、意味とつなげる。</span></div>
       </div>
       <div class="method-step" data-reveal>
         <div class="method-icon-wrap">✋</div>
         <div class="method-h"><span class="en">Do</span><span class="jp">やってみる</span></div>
-        <div class="method-p"><span class="en">Move, speak, create, practise, and apply.</span><span class="jp">動く、話す、作る、練習する。</span></div>
+        <div class="method-p"><span class="en">Speak, move, and try.</span><span class="jp">話す、動く、やってみる。</span></div>
       </div>
       <div class="method-step" data-reveal>
         <div class="method-icon-wrap">⭐</div>
         <div class="method-h"><span class="en">Confidence</span><span class="jp">自信</span></div>
-        <div class="method-p"><span class="en">Use what you learn independently.</span><span class="jp">学んだことを、自分の力で使う。</span></div>
+        <div class="method-p"><span class="en">Build the courage to try again.</span><span class="jp">もう一度挑戦する勇気を育てる。</span></div>
       </div>
     </div>
 
+    <p class="method-note">
+      <span class="en"><strong>Confidence before correctness.</strong> We welcome every real attempt, so learners feel safe to try and to express themselves. Support to improve comes alongside, never instead of the courage to speak.</span>
+      <span class="jp"><strong>正しさより、まず自信。</strong>どんな挑戦も歓迎します。安心して試し、自分を表現できることが第一です。上達のためのサポートは、話す勇気に寄り添う形でお届けします。</span>
+    </p>
     <div class="section-banner" style="aspect-ratio:1672/941;margin-top:40px;margin-bottom:0;">
       <img src="images/landing/05-hear-see-do-method.webp" width="1672" height="941" loading="lazy"
            alt="The four HSD characters demonstrating the Hear, See, Do and Confidence method">
@@ -604,12 +711,43 @@
       <div class="founder-banner-overlay" aria-hidden="true"></div>
       <div class="founder-copy">
         <h2 class="founder-h"><span class="en">Built from real teaching experience in Japan.</span><span class="jp">日本での実際の教育経験から生まれました。</span></h2>
-        <p class="founder-p"><span class="en">HSD OS AI was created from years of working with children, families, students, adults, schools, and educators.</span><span class="jp">HSD OS AIは、子ども、家族、学生、大人、学校、教育関係者との長年の経験から生まれました。</span></p>
+        <p class="founder-p"><span class="en">HSDOS.AI was created from years of working with children, families, students, adults, schools, and educators.</span><span class="jp">HSDOS.AIは、子ども、家族、学生、大人、学校、教育関係者との長年の経験から生まれました。</span></p>
         <p class="founder-p2"><span class="en">The goal is simple: make learning easier to understand and easier to use in real life.</span><span class="jp">目指しているのは、学びを分かりやすくし、実生活で使いやすくすることです。</span></p>
         <div class="founder-sig">
           <span class="name">Jonathan Waltho</span>
-          <span class="title"><span class="en">Founder of HSD OS AI</span><span class="jp">HSD OS AI 創設者</span></span>
+          <span class="title"><span class="en">Founder of HSDOS.AI</span><span class="jp">HSDOS.AI 創設者</span></span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDING FAMILIES ── -->
+<section id="founding">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Founding Families</span><span class="jp">創設ファミリーメンバーのご案内</span></div>
+    <h2 class="h2"><span class="en">Your family’s next chapter starts here.</span><span class="jp">Hear See Doのご家庭へ、先行のご招待。</span></h2>
+    <div class="founding-box">
+      <p class="founding-body" style="margin-top:0"><span class="en">We’re opening HSDOS.AI to a small group of founding families this November. As someone already part of Hear See Do, you’re invited to join at a locked-in founding price and help shape how the platform grows.</span><span class="jp">今年11月、少数のファウンディング・ファミリーにHSDOS.AIを開きます。すでにHear See Doの一員であるあなたを、創設価格でご招待します。プラットフォームの成長づくりにもご参加ください。</span></p>
+      <div class="founding-price" style="margin-top:22px"><span class="en">¥1,500 <small>per month</small></span><span class="jp"><small>月額</small> ¥1,500</span></div>
+      <div class="founding-line"><span class="en">Plus ¥1,000 one-time setup fee</span><span class="jp">＋ 初回設定費 ¥1,000（初回のみ）</span></div>
+      <div class="founding-split">
+        <div><div class="lbl"><span class="en">First payment</span><span class="jp">初回のお支払い</span></div><div class="amt">¥2,500</div><div class="sub"><span class="en">monthly fee + one-time setup</span><span class="jp">月額料金＋初回設定費</span></div></div>
+        <div><div class="lbl"><span class="en">From month 2</span><span class="jp">2か月目以降</span></div><div class="amt">¥1,500</div><div class="sub"><span class="en">per month</span><span class="jp">月額</span></div></div>
+      </div>
+      <div class="founding-forever"><span class="en">Your founding price, for good.</span><span class="jp">創設メンバー価格は、ずっと。</span></div>
+      <p class="founding-fine" style="margin-top:10px"><span class="en">* The founding price applies for as long as your membership continues.</span><span class="jp">※会員資格を継続している間、創設メンバー価格が適用されます。</span></p>
+      <ul class="founding-list">
+        <li><span class="en">Learning for the whole family, with an individual learning journey for each person.</span><span class="jp">ご家族みんなの学びを、ひとりひとりに合った歩みで。</span></li>
+        <li><span class="en">Opens the Family pathway and the apps in the Family plan. The exact profile and AI allowances are shown on the offer page before you pay.</span><span class="jp">ファミリーのパスウェイと、ファミリープランのアプリをご利用いただけます。プロフィール数やAIの利用枠は、お支払い前にご案内ページで明確にお示しします。</span></li>
+        <li><span class="en">Cancel any time; access continues to the end of your paid period.</span><span class="jp">いつでも解約できます。お支払い済み期間の終了までご利用いただけます。</span></li>
+        <li><span class="en">By invitation only, for families Jonathan knows personally through Hear See Do.</span><span class="jp">招待制です。Hear See Doを通じてJonathanが直接知るご家族が対象です。</span></li>
+      </ul>
+      <p class="founding-motto">Confidence First. Humanity Always.</p>
+      <div class="founding-actions">
+        <button type="button" class="btn-gold js-request-access"><span class="en">Request Founding Family Access</span><span class="jp">創設ファミリーアクセスを申し込む</span></button>
+        <p class="founding-fine"><span class="en">Monthly subscription. Cancel before your next renewal to stop future charges. Access continues until the end of your paid period.</span><span class="jp">月額サブスクリプションです。次回更新の前に解約すれば、以降の請求は発生しません。解約後も、お支払い済み期間の終了までご利用いただけます。</span></p>
+        <p class="alt"><span class="en">No invitation? <a href="mailto:hearseedo.english@gmail.com?subject=Founding%20access">Ask about founding access</a></span><span class="jp">ご希望の方は、ジョナサンまで。 <a href="mailto:hearseedo.english@gmail.com?subject=Founding%20access">お問い合わせはこちら</a></span></p>
       </div>
     </div>
   </div>
@@ -620,18 +758,22 @@
   <div class="wrap">
     <div class="eyebrow"><span class="en">Membership</span><span class="jp">メンバーシップ</span></div>
     <h2 class="h2"><span class="en">One platform. One membership.</span><span class="jp">ひとつのプラットフォーム。ひとつのメンバーシップ。</span></h2>
-    <p class="lede"><span class="en">Join HSD OS AI during the beta.</span><span class="jp">ベータ期間中にHSD OS AIに参加しよう。</span></p>
+    <p class="lede"><span class="en">Join HSDOS.AI during the beta.</span><span class="jp">ベータ期間中にHSDOS.AIに参加しよう。</span></p>
 
     <div class="plans-grid" style="grid-template-columns:1fr;max-width:560px">
       <div class="plan-card featured" style="text-align:center">
-        <div class="plan-name"><span class="en">Pricing is coming</span><span class="jp">価格は近日公開</span></div>
-        <p style="font-size:14.5px;color:var(--pale);line-height:1.7;margin:0"><span class="en">Our beta version will help us understand the true costs better. Prices will be loaded by January 1.</span><span class="jp">ベータ版を通じて、実際のコストをより正確に把握します。価格は1月1日までに掲載します。</span></p>
+        <div class="plan-name"><span class="en">Founding Family Access</span><span class="jp">創設ファミリーアクセス</span></div>
+        <p style="font-size:15.5px;color:var(--pale);line-height:1.7;margin:0 0 6px"><span class="en">Bring Hear See Do home—with learning and practice for the whole family, guided by Jona.</span><span class="jp">Hear See Doを、おうちへ。ご家族みんなの学びと練習を、ジョナがサポートします。</span></p>
+        <div class="founding-price" style="margin:14px 0 4px;font-size:clamp(24px,6vw,32px)"><span class="en">¥1,500/month + ¥1,000 one-time setup</span><span class="jp">月額 ¥1,500 ＋ 初回設定費 ¥1,000</span></div>
+        <p style="font-size:14.5px;color:var(--pale);line-height:1.7;margin:8px 0 0"><span class="en">Your founding monthly price stays the same for as long as you remain a member. Initially available to invited Hear See Do families.</span><span class="jp">会員資格を継続している間、創設時の月額料金は変わりません。まずは、ご招待したHear See Doのご家庭が対象です。</span></p>
+        <div style="margin-top:20px"><button type="button" class="btn-gold js-request-access"><span class="en">Request Founding Family Access</span><span class="jp">創設ファミリーアクセスを申し込む</span></button></div>
+        <p class="founding-fine"><span class="en">Already part of Hear See Do? Register your interest and Jonathan will confirm your invitation and next steps.</span><span class="jp">すでにHear See Doの一員ですか？ お申し込みいただければ、ジョナサンがご招待と今後の流れをご連絡します。</span></p>
       </div>
     </div>
 
-    <p class="plans-note"><span class="en">One HSD journey. One connected platform. Your membership gives you access to HSD OS AI, with experiences and pathways available according to your account and membership.</span><span class="jp">ひとつのHSDの旅。ひとつのつながったプラットフォーム。メンバーシップにより、アカウントとメンバーシップ内容に応じた学習体験・パスウェイにアクセスできます。</span></p>
+    <p class="plans-note"><span class="en">One HSD journey. One connected platform. Your membership gives you access to HSDOS.AI, with experiences and pathways available according to your account and membership.</span><span class="jp">ひとつのHSDの旅。ひとつのつながったプラットフォーム。メンバーシップにより、アカウントとメンバーシップ内容に応じた学習体験・パスウェイにアクセスできます。</span></p>
 
-    <p class="plans-afterschool"><span class="en"><strong>Already learning with Hear See Do?</strong><br>Eligible HSD afterschool families: Our beta version will help us understand the true costs better. Prices will be loaded by January 1.</span><span class="jp"><strong>すでにHear See Doで学んでいますか？</strong><br>対象のHSDアフタースクールご利用家庭の方へ：ベータ版を通じて、実際のコストをより正確に把握します。価格は1月1日までに掲載します。</span></p>
+    <p class="plans-afterschool"><span class="en"><strong>Already learning with Hear See Do?</strong><br>Families we know through Hear See Do are invited first, at the founding price above. Request access above and Jonathan will be in touch.</span><span class="jp"><strong>すでにHear See Doで学んでいますか？</strong><br>Hear See Doでご縁のあるご家庭を、上記の創設メンバー価格で先行してご招待しています。上のボタンからお申し込みください。ジョナサンがご連絡します。</span></p>
   </div>
 </section>
 
@@ -648,8 +790,8 @@
       <span class="jp">あなたは、自分が思っている以上に多くのことを知っています。<span class="accent">次は、それを使う自信を育てましょう。</span></span>
     </h2>
     <div class="hero-ctas" style="justify-content:center;">
-      <a href="https://app.hsdos.ai?mode=signup" class="btn-gold"><span class="en">Start Your Journey</span><span class="jp">学びを始める</span></a>
-      <a href="https://app.hsdos.ai/demo" class="btn-ghost">
+      <a href="#family-pathways" class="btn-gold"><span class="en">Explore learning for your family</span><span class="jp">ご家族の学びを見る</span></a>
+      <a href="https://hsdos-demo.netlify.app/demo" class="btn-ghost">
         <span class="en">Try the Demo</span><span class="jp">デモを試す</span>
       </a>
     </div>
@@ -663,8 +805,8 @@
     <a href="#founder"><span class="en">About</span><span class="jp">について</span></a>
     <a href="https://app.hsdos.ai"><span class="en">Resources</span><span class="jp">リソース</span></a>
     <a href="mailto:hearseedo.english@gmail.com"><span class="en">Help</span><span class="jp">ヘルプ</span></a>
-    <a href="https://app.hsdos.ai/privacy"><span class="en">Privacy</span><span class="jp">プライバシー</span></a>
-    <a href="https://app.hsdos.ai/terms"><span class="en">Terms</span><span class="jp">利用規約</span></a>
+    <a href="/privacy"><span class="en">Privacy</span><span class="jp">プライバシー</span></a>
+    <a href="/terms"><span class="en">Terms</span><span class="jp">利用規約</span></a>
     <a href="mailto:hearseedo.english@gmail.com"><span class="en">Contact</span><span class="jp">お問い合わせ</span></a>
   </div>
   <div class="footer-social">
@@ -675,7 +817,7 @@
 </footer>
 
 <!-- ── VIDEO LIGHTBOX (explainer.mp4) ── -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="How HSD OS AI works">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="How HSDOS.AI works">
   <div class="lightbox-inner">
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close video">✕</button>
     <video id="explainerVideo" controls playsinline>
@@ -771,6 +913,60 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // ── DYNAMIC YEAR ──
 document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<div class="fam-modal" id="famModal" role="dialog" aria-modal="true" aria-labelledby="famTitle">
+  <div class="fam-card">
+    <button type="button" class="fam-x" id="famClose" aria-label="Close">&times;</button>
+    <form id="famForm" novalidate>
+      <h3 id="famTitle"><span class="en">Request Founding Family Access</span><span class="jp">創設ファミリーアクセスのお申し込み</span></h3>
+      <p class="sub"><span class="en">Already part of Hear See Do? Register your interest and Jonathan will confirm your invitation and next steps. Nothing is charged here.</span><span class="jp">すでにHear See Doの一員ですか？ お申し込みいただければ、ジョナサンがご招待と今後の流れをご連絡します。この画面でお支払いは発生しません。</span></p>
+      <label for="famName"><span class="en">Your name</span><span class="jp">お名前</span></label>
+      <input type="text" id="famName" autocomplete="name" maxlength="100" required>
+      <label for="famEmail"><span class="en">Email</span><span class="jp">メールアドレス</span></label>
+      <input type="email" id="famEmail" autocomplete="email" maxlength="200" required>
+      <label for="famNote"><span class="en">Anything you'd like Jonathan to know (optional)</span><span class="jp">ジョナサンに伝えたいこと（任意）</span></label>
+      <textarea id="famNote" maxlength="600"></textarea>
+      <input class="hp" type="text" id="famWebsite" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="fam-err" id="famErr" role="alert"></div>
+      <button type="submit" class="btn-gold" id="famSubmit"><span class="en">Send my request</span><span class="jp">申し込みを送信</span></button>
+    </form>
+    <div class="fam-ok" id="famOk" role="status">
+      <div class="tick">✓</div>
+      <h3 style="margin:8px 0"><span class="en">Request received</span><span class="jp">お申し込みを受け付けました</span></h3>
+      <p class="sub"><span class="en">Thank you. Jonathan will confirm your invitation and next steps by email. No payment has been taken.</span><span class="jp">ありがとうございます。ジョナサンがメールでご招待と今後の流れをご連絡します。お支払いは発生していません。</span></p>
+      <button type="button" class="btn-gold" id="famDone"><span class="en">Close</span><span class="jp">閉じる</span></button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById('famModal'), f=document.getElementById('famForm'), ok=document.getElementById('famOk'),
+      err=document.getElementById('famErr'), btn=document.getElementById('famSubmit'), last=null;
+  function jp(){ return document.body.classList.contains('jp') || document.documentElement.classList.contains('jp') || document.documentElement.lang==='ja' || (document.getElementById('btn-jp')||{}).className.indexOf('on')>-1; }
+  function open(e){ if(e) e.preventDefault(); last=document.activeElement; f.style.display=''; ok.style.display='none'; err.style.display='none'; m.classList.add('open'); setTimeout(function(){document.getElementById('famName').focus();},50); }
+  function close(){ m.classList.remove('open'); if(last&&last.focus) last.focus(); }
+  Array.prototype.forEach.call(document.querySelectorAll('.js-request-access'),function(b){ b.addEventListener('click',function(e){ var mn=document.getElementById('mobileNav'); if(mn&&mn.classList.contains('open')&&window.toggleMobileNav) toggleMobileNav(); open(e); }); });
+  document.getElementById('famClose').onclick=close; document.getElementById('famDone').onclick=close;
+  m.addEventListener('click',function(e){ if(e.target===m) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&m.classList.contains('open')) close(); });
+  function say(en,j){ err.textContent=jp()?j:en; err.style.display='block'; }
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); err.style.display='none';
+    var name=document.getElementById('famName').value.trim(), email=document.getElementById('famEmail').value.trim();
+    if(!name){ say('Please tell us your name.','お名前をご入力ください。'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ say('Please enter a valid email address.','正しいメールアドレスをご入力ください。'); return; }
+    btn.disabled=true;
+    fetch('/.netlify/functions/founding-interest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      name:name,email:email,note:document.getElementById('famNote').value,website:document.getElementById('famWebsite').value,lang:jp()?'jp':'en'})})
+    .then(function(r){ return r.json().catch(function(){return{};}).then(function(j){ return {s:r.status,j:j}; }); })
+    .then(function(x){
+      btn.disabled=false;
+      if(x.j&&x.j.ok){ f.style.display='none'; ok.style.display='block'; f.reset(); return; }
+      if(x.s===429) say('Too many requests just now. Please try again in a few minutes, or email hearseedo.english@gmail.com.','短時間にリクエストが集中しています。しばらくしてからお試しいただくか、hearseedo.english@gmail.com までご連絡ください。');
+      else say('We could not send your request. Please email hearseedo.english@gmail.com and we will reply.','送信できませんでした。お手数ですが hearseedo.english@gmail.com までメールをお送りください。');
+    }).catch(function(){ btn.disabled=false; say('We could not send your request. Please email hearseedo.english@gmail.com and we will reply.','送信できませんでした。お手数ですが hearseedo.english@gmail.com までメールをお送りください。'); });
+  });
+})();
 </script>
 </body>
 </html>
