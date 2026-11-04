@@ -955,16 +955,18 @@ document.getElementById('year').textContent = new Date().getFullYear();
     var name=document.getElementById('famName').value.trim(), email=document.getElementById('famEmail').value.trim();
     if(!name){ say('Please tell us your name.','お名前をご入力ください。'); return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ say('Please enter a valid email address.','正しいメールアドレスをご入力ください。'); return; }
-    btn.disabled=true;
+    var label=btn.innerHTML; btn.disabled=true; f.setAttribute('aria-busy','true');
+    btn.innerHTML='<span class="en">Sending…</span><span class="jp">送信中…</span>';
+    function idle(){ btn.disabled=false; btn.innerHTML=label; f.removeAttribute('aria-busy'); }
     fetch('/.netlify/functions/founding-interest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
       name:name,email:email,note:document.getElementById('famNote').value,website:document.getElementById('famWebsite').value,lang:jp()?'jp':'en'})})
     .then(function(r){ return r.json().catch(function(){return{};}).then(function(j){ return {s:r.status,j:j}; }); })
     .then(function(x){
-      btn.disabled=false;
+      idle();
       if(x.j&&x.j.ok){ f.style.display='none'; ok.style.display='block'; f.reset(); return; }
       if(x.s===429) say('Too many requests just now. Please try again in a few minutes, or email hearseedo.english@gmail.com.','短時間にリクエストが集中しています。しばらくしてからお試しいただくか、hearseedo.english@gmail.com までご連絡ください。');
       else say('We could not send your request. Please email hearseedo.english@gmail.com and we will reply.','送信できませんでした。お手数ですが hearseedo.english@gmail.com までメールをお送りください。');
-    }).catch(function(){ btn.disabled=false; say('We could not send your request. Please email hearseedo.english@gmail.com and we will reply.','送信できませんでした。お手数ですが hearseedo.english@gmail.com までメールをお送りください。'); });
+    }).catch(function(){ idle(); say('We could not send your request. Please email hearseedo.english@gmail.com and we will reply.','送信できませんでした。お手数ですが hearseedo.english@gmail.com までメールをお送りください。'); });
   });
 })();
 </script>

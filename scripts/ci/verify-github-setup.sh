@@ -14,7 +14,9 @@ for e in "${envs[@]}"; do
   n=$(echo "$json" | python3 -c "import sys,json;d=json.load(sys.stdin);print(sum(len(r.get('reviewers',[])) for r in d.get('protection_rules',[]) if r['type']=='required_reviewers'))")
   [ "$n" -ge 1 ] && ok "required reviewers configured ($n)" || bad "no required reviewers on '$e'"
   echo "$json" | python3 -c "import sys,json;d=json.load(sys.stdin);print(next((r.get('prevent_self_review') for r in d.get('protection_rules',[]) if r['type']=='required_reviewers'),None))" | grep -q True && ok "self-review prevented" || echo "  note  self-review is allowed (fine for a single owner; set a second reviewer if you add one)"
-  echo "$json" | python3 -c "import sys,json;d=json.load(sys.stdin);p=d.get('deployment_branch_policy');print('ok' if p else 'none')" | grep -q ok && ok "deployment limited to selected branches" || bad "'$e' can be deployed from any branch"
+  if [ "$e" = production ]; then
+    echo "$json" | python3 -c "import sys,json;d=json.load(sys.stdin);p=d.get('deployment_branch_policy');print('ok' if p else 'none')" | grep -q ok && ok "deployment limited to selected branches" || bad "'$e' can be deployed from any branch"
+  else echo "  note  '$e' may deploy from any branch (approval still required)"; fi
   gh api "repos/$repo/environments/$e/secrets" --jq '.secrets[].name' 2>/dev/null | grep -qx NETLIFY_AUTH_TOKEN && ok "NETLIFY_AUTH_TOKEN is an environment secret" || bad "NETLIFY_AUTH_TOKEN is not set on environment '$e'"
 done
 echo "-- secrets must NOT be repository-wide"

@@ -45,3 +45,11 @@ test("the unused survey endpoint stays disabled", async () => {
   const r = await require(path.join(root, "netlify", "functions", "struggle-survey.js")).handler({ httpMethod: "POST", body: "{}" });
   assert.equal(r.statusCode, 410);
 });
+
+test("the request form shows a Sending state and restores the button on success and failure", () => {
+  const h = fs.readFileSync(path.join(site, "index.html"), "utf8");
+  assert.ok(h.includes('Sending…') && h.includes('送信中…'), "both languages");
+  assert.ok(h.includes("function idle()"), "a single place restores the button");
+  assert.equal((h.match(/idle\(\)/g) || []).length >= 3, true, "restored in the success path and the failure path");
+  assert.ok(!/btn\.disabled=false/.test(h.replace("function idle(){ btn.disabled=false;", "")), "no path re-enables the button without restoring its label");
+});
