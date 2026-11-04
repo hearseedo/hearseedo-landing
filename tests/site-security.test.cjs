@@ -37,15 +37,9 @@ test("every local file a page references exists in the bundle", () => {
   }
   assert.deepEqual(missing, []);
 });
-test("no credentials in the repository files", () => {
-  const pats = [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, /\b(?:sk|rk)_(?:live|test)_[A-Za-z0-9]{16,}/, /\bre_[A-Za-z0-9]{20,}/, /AIza[0-9A-Za-z_-]{35}/, /"private_key"\s*:/, /\bwhsec_[A-Za-z0-9]{16,}/];
-  const tracked = execFileSync("git", ["ls-files"], { cwd: root }).toString().split("\n").filter((f) => f && !/\.(png|jpg|webp|mp4|mov|svg)$/.test(f));
-  const hits = [];
-  for (const f of tracked.concat(["index.html", "terms.html", "privacy.html", "about-jona.html"])) {
-    const p = path.join(root, f); if (!fs.existsSync(p)) continue;
-    const t = fs.readFileSync(p, "utf8"); for (const re of pats) if (re.test(t)) hits.push(f + " matches " + re);
-  }
-  assert.deepEqual(hits, []);
+test("no credentials in tracked files or in any commit (shared scanner)", () => {
+  execFileSync("node", [path.join(root, "scripts", "ci", "secret-scan.cjs")], { cwd: root, stdio: "pipe" });
+  execFileSync("node", [path.join(root, "scripts", "ci", "secret-scan.cjs"), "--history"], { cwd: root, stdio: "pipe" });
 });
 test("the unused survey endpoint stays disabled", async () => {
   const r = await require(path.join(root, "netlify", "functions", "struggle-survey.js")).handler({ httpMethod: "POST", body: "{}" });
