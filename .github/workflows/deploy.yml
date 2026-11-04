@@ -1,0 +1,36 @@
+name: Deploy landing
+# Production only. It never runs for pull requests, so PRs cannot reach the Netlify token.
+# The token must be stored as a secret on the 'production' ENVIRONMENT (not a repository secret);
+# the environment requires owner approval and only deploys from main (verify: scripts/ci/verify-github-setup.sh).
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: deploy-landing
+  cancel-in-progress: false
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with: { node-version: 20 }
+      - run: npm test && npm run build
+      - run: npx --yes netlify-cli@27.16.2 deploy --prod --dir _site --functions netlify/functions --message "CI ${{ github.sha }}"
+      - name: Smoke test production
+        run: |
+          sleep 10
+          curl -fsSI https://hsdos.ai/ | tee /tmp/h.txt
+          grep -qi '^content-security-policy:' /tmp/h.txt
+          grep -qi '^x-frame-options: DENY' /tmp/h.txt
+          test "$(curl -s -o /dev/null -w '%{http_code}' https://hsdos.ai/index-old.html)" = "404"
+          test "$(curl -s -o /dev/null -w '%{http_code}' -X POST https://hsdos.ai/.netlify/functions/struggle-survey)" = "410"
+          test "$(curl -s -o /dev/null -w '%{http_code}' -X POST https://hsdos.ai/.netlify/functions/founding-interest -H 'Content-Type: application/json' -d '{\"name\":\"ci\",\"email\":\"bad\"}')" = "400"
