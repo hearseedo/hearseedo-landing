@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Try a short Hear See Do Home activity and take one small step together as a family.">
+<title>Hear See Do Home Demo</title>
+<style>
+  :root { color-scheme: dark; font: 100%/1.6 system-ui, sans-serif; color: #fff6e6; background: #10172a; }
+  * { box-sizing: border-box; }
+  [hidden], html[lang="en"] .jp, html[lang="ja"] .en { display: none !important; }
+  body { margin: 0; background: radial-gradient(ellipse at top, #263b5a, transparent 65%); min-height: 100vh; }
+  header, main { width: min(100% - 2rem, 52rem); margin: auto; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: 1rem 0; }
+  header a { color: inherit; font-weight: 800; }
+  main { padding: 1rem 0 2rem; }
+  section { border: 1px solid #536585; background: #151f34; border-radius: 1.5rem; padding: clamp(1.2rem, 5vw, 2.8rem); }
+  h1, h2 { line-height: 1.15; margin: 0 0 1rem; font-size: clamp(1.9rem, 6vw, 3.2rem); text-wrap: balance; }
+  p { margin: 0 0 1rem; max-width: 46ch; }
+  .eyebrow { color: #ffda85; font-weight: 800; margin-bottom: .6rem; }
+  .muted { color: #d1daec; }
+  .scene { display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+  .scene img { width: 100%; height: 12rem; object-fit: contain; }
+  .actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+  button, .button { cursor: pointer; display: inline-block; font: inherit; font-weight: 750; border: 1px solid #8394b1; border-radius: .7rem; padding: .55rem .85rem; color: inherit; background: #23324d; text-decoration: none; min-height: 44px; }
+  .primary { background: #ffda85; color: #1f1a10; border-color: #ffda85; }
+  button[aria-pressed="true"] { border-color: #ffda85; color: #ffda85; }
+  :focus-visible { outline: 3px solid #9be6ff; outline-offset: 4px; }
+  .word { display: block; font-size: 2.6rem; line-height: 1.3; font-weight: 800; }
+  .response { margin-top: 1rem; }
+  .response:empty { margin: 0; }
+  .activity { padding: 1rem 1.25rem; background: #23324d; border-radius: .8rem; margin-bottom: 1rem; }
+  .activity ol { padding-left: 1.4rem; margin: 0; }
+  .activity li + li { margin-top: .45rem; }
+  @media (max-width: 31rem) {
+    .scene { grid-template-columns: 1fr; }
+    .scene img { height: 8rem; justify-self: start; width: 7rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a href="/">Hear See Do Home</a>
+  <div id="languages" hidden>
+    <button type="button" data-lang="en" lang="en">EN</button>
+    <button type="button" data-lang="jp" lang="ja">日本語</button>
+  </div>
+</header>
+<main>
+  <section data-step>
+    <p class="eyebrow"><span class="en">A short family demo</span><span class="jp" lang="ja">ご家族で楽しめるミニ体験</span></p>
+    <div class="scene">
+      <div>
+        <h1 tabindex="-1"><span class="en">Bring Hear See Do home</span><span class="jp" lang="ja">Hear See Doを、おうちへ。</span></h1>
+        <p class="en">Emma knows the word <em>frog</em>. When it’s time to say it out loud, she freezes. What would make it easier for her to try?</p>
+        <p class="jp" lang="ja">エマは「frog」という言葉を知っています。でも、声に出そうとすると、言葉が出てきません。どうすれば、少し気楽に挑戦できるでしょうか？</p>
+        <p class="muted"><span class="en">Meet Jona in this demo, a preview of the practice guide coming to Hear See Do Home.</span><span class="jp" lang="ja">Hear See Do Homeに登場予定の練習ガイド、ジョナを体験してみましょう。</span></p>
+      </div>
+      <img src="/demo/emma.webp" alt="" width="1024" height="1536">
+    </div>
+    <div class="actions">
+      <button type="button" class="primary" data-next hidden><span class="en">Start the demo</span><span class="jp" lang="ja">体験を始める</span></button>
+      <a class="button" href="/#founding"><span class="en">Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセス</span></a>
+    </div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Hear · See · Do</span><span class="jp" lang="ja">聞く・見る・やってみる</span></p>
+    <div class="scene">
+      <div>
+        <h2 tabindex="-1"><span class="en">One small try with Jona</span><span class="jp" lang="ja">ジョナと一緒に、小さな一歩</span></h2>
+        <p class="word"><span aria-hidden="true">🐸</span> <span lang="en">frog</span></p>
+        <p><span class="en">“Listen to the word, look at the frog, then try saying it out loud. Take your time.”</span><span class="jp" lang="ja">「言葉を聞いて、カエルを見て、声に出してみよう。ゆっくりでいいよ。」</span></p>
+      </div>
+      <img src="/demo/jona.webp" alt="" width="1024" height="1536">
+    </div>
+    <audio id="word-audio" src="/demo/frog.mp3" preload="none"></audio>
+    <button type="button" id="hear-word"><span class="en">▶ Hear “frog”</span><span class="jp" lang="ja">▶ 「frog」を聞く</span></button>
+    <div class="actions">
+      <button type="button" data-feedback="tried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="stuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+      <button type="button" class="primary" data-next><span class="en">See the family activity</span><span class="jp" lang="ja">おうちでの遊びを見る</span></button>
+    </div>
+    <p id="feedback" class="response" role="status"></p>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Try it together at home</span><span class="jp" lang="ja">おうちで一緒にやってみよう</span></p>
+    <h2 tabindex="-1"><span class="en">Take the frog off the screen</span><span class="jp" lang="ja">おうちでカエルごっこ</span></h2>
+    <p><span class="en">Here’s one way Emma and a parent can keep going. You can try it together, too.</span><span class="jp" lang="ja">エマとおうちの人は、こんなふうに練習を続けられます。ご家族でもやってみましょう。</span></p>
+    <div class="activity">
+      <ol>
+        <li><span class="en">Say <em>frog</em> once so your child can hear it.</span><span class="jp" lang="ja">まず、おうちの人が「frog」と言って、お子さんに聞かせます。</span></li>
+        <li><span class="en">Make a frog hop with two fingers and let your child copy you.</span><span class="jp" lang="ja">指を2本使ってカエルが跳ぶまねをし、お子さんにもまねしてもらいます。</span></li>
+        <li><span class="en">Take turns saying <em>frog</em> as your frog hops. Finish with “You gave it a try!”</span><span class="jp" lang="ja">カエルが跳ぶたびに、交代で「frog」と言ってみましょう。最後は「やってみたね！」と声をかけます。</span></li>
+      </ol>
+    </div>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">Continue</span><span class="jp" lang="ja">次へ</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow">Hear See Do Home</p>
+    <h2 tabindex="-1">Confidence First. Humanity Always.</h2>
+    <p><span class="en">Bring more of these small English moments into your family’s day. We’re starting with invited Hear See Do families.</span><span class="jp" lang="ja">ご家族の日常に、英語を使う小さなきっかけを。まずは、ご招待したHear See Doのご家庭から始まります。</span></p>
+    <p class="muted"><span class="en">¥1,500 per month + ¥1,000 one-time setup</span><span class="jp" lang="ja">月額 ¥1,500 ＋ 初回設定費 ¥1,000</span></p>
+    <div class="actions">
+      <a class="button primary" href="/#founding"><span class="en">Request Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセスを申し込む</span></a>
+      <button type="button" id="replay"><span class="en">Replay demo</span><span class="jp" lang="ja">もう一度体験する</span></button>
+    </div>
+  </section>
+</main>
+<script>
+  const steps = Array.from(document.querySelectorAll('[data-step]'));
+  const languageButtons = Array.from(document.querySelectorAll('[data-lang]'));
+  const audio = document.querySelector('#word-audio');
+  const feedback = document.querySelector('#feedback');
+  const feedbackCopy = {
+    tried: { en: 'You gave it a go! How did that feel?', jp: 'やってみたね！どんな気持ちだった？' },
+    stuck: { en: 'Take your time. You can listen again or try the activity together.', jp: 'ゆっくりで大丈夫。もう一度聞いてもいいし、おうちの人と一緒にやってみてもいいよ。' },
+    audio: { en: 'The audio is unavailable. You can say “frog” together and keep going.', jp: '音声を再生できません。一緒に「frog」と言って、次に進めます。' }
+  };
+  let step = 0;
+  let language = 'en';
+  let response = null;
+
+  function renderFeedback() {
+    feedback.textContent = response ? feedbackCopy[response][language] : '';
+  }
+
+  function setLanguage(nextLanguage) {
+    language = nextLanguage;
+    document.documentElement.lang = language === 'jp' ? 'ja' : 'en';
+    languageButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+    });
+    try { localStorage.setItem('hsd-landing-lang', language); } catch {}
+    renderFeedback();
+  }
+
+  function showStep(nextStep) {
+    audio.pause();
+    steps[step].hidden = true;
+    step = nextStep;
+    steps[step].hidden = false;
+    steps[step].querySelector('h1, h2').focus();
+  }
+
+  let savedLanguage;
+  try { savedLanguage = localStorage.getItem('hsd-landing-lang'); } catch {}
+  setLanguage(savedLanguage === 'en' || savedLanguage === 'jp'
+    ? savedLanguage
+    : navigator.language.toLowerCase().startsWith('ja') ? 'jp' : 'en');
+  languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+  document.querySelector('#languages').hidden = false;
+
+  document.querySelectorAll('[data-next]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => showStep(step + 1));
+  });
+  document.querySelector('#hear-word').addEventListener('click', async () => {
+    try {
+      audio.currentTime = 0;
+      await audio.play();
+    } catch (error) {
+      if (error.name === 'AbortError' || step !== 1) return;
+      response = 'audio';
+      renderFeedback();
+    }
+  });
+  document.querySelectorAll('[data-feedback]').forEach((button) => {
+    button.addEventListener('click', () => {
+      response = button.dataset.feedback;
+      renderFeedback();
+    });
+  });
+  document.querySelector('#replay').addEventListener('click', () => {
+    response = null;
+    renderFeedback();
+    showStep(0);
+  });
+</script>
+</body>
+</html>
