@@ -1,1 +1,325 @@
-PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IlRyeSBIZWFyIFNlZSBEbyBIb21lIGFjcm9zcyB0aHJlZSBldmVyeWRheSBtb21lbnRzIGZvciBjaGlsZHJlbiwgc3R1ZGVudHMsIGFuZCBhZHVsdHMuIj4KPHRpdGxlPkhlYXIgU2VlIERvIEhvbWUgRGVtbzwvdGl0bGU+CjxzdHlsZT4KICA6cm9vdCB7IGNvbG9yLXNjaGVtZTogZGFyazsgZm9udDogMTAwJS8xLjYgc3lzdGVtLXVpLCBzYW5zLXNlcmlmOyBjb2xvcjogI2ZmZjZlNjsgYmFja2dyb3VuZDogIzEwMTcyYTsgfQogICogeyBib3gtc2l6aW5nOiBib3JkZXItYm94OyB9CiAgW2hpZGRlbl0sIGh0bWxbbGFuZz0iZW4iXSAuanAsIGh0bWxbbGFuZz0iamEiXSAuZW4geyBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7IH0KICBib2R5IHsgbWFyZ2luOiAwOyBiYWNrZ3JvdW5kOiByYWRpYWwtZ3JhZGllbnQoZWxsaXBzZSBhdCB0b3AsICMyNjNiNWEsIHRyYW5zcGFyZW50IDY1JSk7IG1pbi1oZWlnaHQ6IDEwMHZoOyB9CiAgaGVhZGVyLCBtYWluIHsgd2lkdGg6IG1pbigxMDAlIC0gMnJlbSwgNTJyZW0pOyBtYXJnaW46IGF1dG87IH0KICBoZWFkZXIgeyBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGdhcDogLjVyZW07IHBhZGRpbmc6IDFyZW0gMDsgfQogIGhlYWRlciBhIHsgY29sb3I6IGluaGVyaXQ7IGZvbnQtd2VpZ2h0OiA4MDA7IH0KICBtYWluIHsgcGFkZGluZzogMXJlbSAwIDJyZW07IH0KICBzZWN0aW9uIHsgYm9yZGVyOiAxcHggc29saWQgIzUzNjU4NTsgYmFja2dyb3VuZDogIzE1MWYzNDsgYm9yZGVyLXJhZGl1czogMS41cmVtOyBwYWRkaW5nOiBjbGFtcCgxLjJyZW0sIDV2dywgMi44cmVtKTsgfQogIGgxLCBoMiB7IGxpbmUtaGVpZ2h0OiAxLjE1OyBtYXJnaW46IDAgMCAxcmVtOyBmb250LXNpemU6IGNsYW1wKDEuOXJlbSwgNnZ3LCAzLjJyZW0pOyB0ZXh0LXdyYXA6IGJhbGFuY2U7IH0KICBwIHsgbWFyZ2luOiAwIDAgMXJlbTsgbWF4LXdpZHRoOiA0NmNoOyB9CiAgLmV5ZWJyb3cgeyBjb2xvcjogI2ZmZGE4NTsgZm9udC13ZWlnaHQ6IDgwMDsgbWFyZ2luLWJvdHRvbTogLjZyZW07IH0KICAubXV0ZWQgeyBjb2xvcjogI2QxZGFlYzsgfQogIC5zY2VuZSB7IGRpc3BsYXk6IGdyaWQ7IGdyaWQtdGVtcGxhdGUtY29sdW1uczogbWlubWF4KDAsIDFmcikgbWlubWF4KDdyZW0sIDExcmVtKTsgZ2FwOiAxcmVtOyBhbGlnbi1pdGVtczogY2VudGVyOyB9CiAgLnNjZW5lIGltZyB7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEycmVtOyBvYmplY3QtZml0OiBjb250YWluOyB9CiAgLmFjdGlvbnMgeyBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBmbGV4LXdyYXA6IHdyYXA7IGdhcDogLjY1cmVtOyBtYXJnaW4tdG9wOiAxLjI1cmVtOyB9CiAgYnV0dG9uLCAuYnV0dG9uIHsgY3Vyc29yOiBwb2ludGVyOyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQ6IGluaGVyaXQ7IGZvbnQtd2VpZ2h0OiA3NTA7IGJvcmRlcjogMXB4IHNvbGlkICM4Mzk0YjE7IGJvcmRlci1yYWRpdXM6IC43cmVtOyBwYWRkaW5nOiAuNTVyZW0gLjg1cmVtOyBjb2xvcjogaW5oZXJpdDsgYmFja2dyb3VuZDogIzIzMzI0ZDsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBtaW4taGVpZ2h0OiA0NHB4OyB9CiAgLnByaW1hcnkgeyBiYWNrZ3JvdW5kOiAjZmZkYTg1OyBjb2xvcjogIzFmMWExMDsgYm9yZGVyLWNvbG9yOiAjZmZkYTg1OyB9CiAgYnV0dG9uW2FyaWEtcHJlc3NlZD0idHJ1ZSJdIHsgYm9yZGVyLWNvbG9yOiAjZmZkYTg1OyBjb2xvcjogI2ZmZGE4NTsgfQogIDpmb2N1cy12aXNpYmxlIHsgb3V0bGluZTogM3B4IHNvbGlkICM5YmU2ZmY7IG91dGxpbmUtb2Zmc2V0OiA0cHg7IH0KICAud29yZCB7IGRpc3BsYXk6IGJsb2NrOyBmb250LXNpemU6IDIuNnJlbTsgbGluZS1oZWlnaHQ6IDEuMzsgZm9udC13ZWlnaHQ6IDgwMDsgfQogIC5yZXNwb25zZSB7IG1hcmdpbi10b3A6IDFyZW07IH0KICAucmVzcG9uc2U6ZW1wdHkgeyBtYXJnaW46IDA7IH0KICAuYWN0aXZpdHkgeyBwYWRkaW5nOiAxcmVtIDEuMjVyZW07IGJhY2tncm91bmQ6ICMyMzMyNGQ7IGJvcmRlci1yYWRpdXM6IC44cmVtOyBtYXJnaW4tYm90dG9tOiAxcmVtOyB9CiAgLmFjdGl2aXR5IG9sIHsgcGFkZGluZy1sZWZ0OiAxLjRyZW07IG1hcmdpbjogMDsgfQogIC5hY3Rpdml0eSBsaSArIGxpIHsgbWFyZ2luLXRvcDogLjQ1cmVtOyB9CiAgQG1lZGlhIChtYXgtd2lkdGg6IDMxcmVtKSB7CiAgICAuc2NlbmUgeyBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjsgfQogICAgLnNjZW5lIGltZyB7IGhlaWdodDogOHJlbTsganVzdGlmeS1zZWxmOiBzdGFydDsgd2lkdGg6IDdyZW07IH0KICB9Cjwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CjxoZWFkZXI+CiAgPGEgaHJlZj0iLyI+SGVhciBTZWUgRG8gSG9tZTwvYT4KICA8ZGl2IGlkPSJsYW5ndWFnZXMiIGhpZGRlbj4KICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWxhbmc9ImVuIiBsYW5nPSJlbiI+RU48L2J1dHRvbj4KICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWxhbmc9ImpwIiBsYW5nPSJqYSI+5pel5pys6KqePC9idXR0b24+CiAgPC9kaXY+CjwvaGVhZGVyPgo8bWFpbj4KICA8c2VjdGlvbiBkYXRhLXN0ZXA+CiAgICA8cCBjbGFzcz0iZXllYnJvdyI+PHNwYW4gY2xhc3M9ImVuIj5UaHJlZSB3YXlzIHRvIGJ1aWxkIHNwZWFraW5nIGNvbmZpZGVuY2U8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+6Iux6Kqe44KS6Kmx44GZ6Ieq5L+h44KS6IKy44Gm44KLM+OBpOOBruS9k+mokzwvc3Bhbj48L3A+CiAgICA8ZGl2IGNsYXNzPSJzY2VuZSI+CiAgICAgIDxkaXY+CiAgICAgICAgPGgxIHRhYmluZGV4PSItMSI+PHNwYW4gY2xhc3M9ImVuIj5CcmluZyBIZWFyIFNlZSBEbyBob21lPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPkhlYXIgU2VlIERv44KS44CB44GK44GG44Gh44G444CCPC9zcGFuPjwvaDE+CiAgICAgICAgPHAgY2xhc3M9ImVuIj5FbW1hIGtub3dzIHRoZSB3b3JkIDxlbT5mcm9nPC9lbT4uIFdoZW4gaXTigJlzIHRpbWUgdG8gc2F5IGl0IG91dCBsb3VkLCBzaGUgZnJlZXplcy4gV2hhdCB3b3VsZCBtYWtlIGl0IGVhc2llciBmb3IgaGVyIHRvIHRyeT88L3A+CiAgICAgICAgPHAgY2xhc3M9ImpwIiBsYW5nPSJqYSI+44Ko44Oe44Gv44CMZnJvZ+OAjeOBqOOBhOOBhuiogOiRieOCkuefpeOBo+OBpuOBhOOBvuOBmeOAguOBp+OCguOAgeWjsOOBq+WHuuOBneOBhuOBqOOBmeOCi+OBqOOAgeiogOiRieOBjOWHuuOBpuOBjeOBvuOBm+OCk+OAguOBqeOBhuOBmeOCjOOBsOOAgeWwkeOBl+awl+alveOBq+aMkeaIpuOBp+OBjeOCi+OBp+OBl+OCh+OBhuOBi++8nzwvcD4KICAgICAgICA8cCBjbGFzcz0ibXV0ZWQiPjxzcGFuIGNsYXNzPSJlbiI+U3RhcnQgd2l0aCBFbW1hLCB0aGVuIHRyeSBhbiBpbnRlcnZpZXcgb3BlbmVyIGFuZCBhIGNhZsOpIG9yZGVyLiBKb25hIGlzIHRoZSBwcmFjdGljZSBndWlkZSBjb21pbmcgdG8gSGVhciBTZWUgRG8gSG9tZS48L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44Ko44Oe44Gu5L2T6aiT44GL44KJ5aeL44KB44Gm44CB6Z2i5o6l44Gu56ys5LiA5aOw44Go44Kr44OV44Kn44Gn44Gu5rOo5paH44Gr44KC5oyR5oim44GX44G+44GX44KH44GG44CC44K444On44OK44GvSGVhciBTZWUgRG8gSG9tZeOBq+eZu+WgtOS6iOWumuOBrue3tOe/kuOCrOOCpOODieOBp+OBmeOAgjwvc3Bhbj48L3A+CiAgICAgIDwvZGl2PgogICAgICA8aW1nIHNyYz0iL2RlbW8vZW1tYS53ZWJwIiBhbHQ9IiIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTUzNiI+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImFjdGlvbnMiPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9InByaW1hcnkiIGRhdGEtbmV4dCBoaWRkZW4+PHNwYW4gY2xhc3M9ImVuIj5TdGFydCB0aGUgZGVtbzwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7kvZPpqJPjgpLlp4vjgoHjgos8L3NwYW4+PC9idXR0b24+CiAgICAgIDxhIGNsYXNzPSJidXR0b24iIGhyZWY9Ii8jZm91bmRpbmciPjxzcGFuIGNsYXNzPSJlbiI+Rm91bmRpbmcgRmFtaWx5IEFjY2Vzczwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7libXoqK3jg5XjgqHjg5/jg6rjg7zjgqLjgq/jgrvjgrk8L3NwYW4+PC9hPgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgogIDxzZWN0aW9uIGRhdGEtc3RlcCBoaWRkZW4+CiAgICA8cCBjbGFzcz0iZXllYnJvdyI+PHNwYW4gY2xhc3M9ImVuIj5IZWFyIMK3IFNlZSDCtyBEbzwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7ogZ7jgY/jg7vopovjgovjg7vjgoTjgaPjgabjgb/jgos8L3NwYW4+PC9wPgogICAgPGRpdiBjbGFzcz0ic2NlbmUiPgogICAgICA8ZGl2PgogICAgICAgIDxoMiB0YWJpbmRleD0iLTEiPjxzcGFuIGNsYXNzPSJlbiI+T25lIHNtYWxsIHRyeSB3aXRoIEpvbmE8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44K444On44OK44Go5LiA57eS44Gr44CB5bCP44GV44Gq5LiA5q2pPC9zcGFuPjwvaDI+CiAgICAgICAgPHAgY2xhc3M9IndvcmQiPjxzcGFuIGFyaWEtaGlkZGVuPSJ0cnVlIj7wn5C4PC9zcGFuPiA8c3BhbiBsYW5nPSJlbiI+ZnJvZzwvc3Bhbj48L3A+CiAgICAgICAgPHA+PHNwYW4gY2xhc3M9ImVuIj7igJxMaXN0ZW4gdG8gdGhlIHdvcmQsIGxvb2sgYXQgdGhlIGZyb2csIHRoZW4gdHJ5IHNheWluZyBpdCBvdXQgbG91ZC4gVGFrZSB5b3VyIHRpbWUu4oCdPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOAjOiogOiRieOCkuiBnuOBhOOBpuOAgeOCq+OCqOODq+OCkuimi+OBpuOAgeWjsOOBq+WHuuOBl+OBpuOBv+OCiOOBhuOAguOChuOBo+OBj+OCiuOBp+OBhOOBhOOCiOOAguOAjTwvc3Bhbj48L3A+CiAgICAgIDwvZGl2PgogICAgICA8aW1nIHNyYz0iL2RlbW8vam9uYS53ZWJwIiBhbHQ9IiIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTUzNiI+CiAgICA8L2Rpdj4KICAgIDxhdWRpbyBpZD0id29yZC1hdWRpbyIgc3JjPSIvZGVtby9mcm9nLm1wMyIgcHJlbG9hZD0ibm9uZSI+PC9hdWRpbz4KICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBpZD0iaGVhci13b3JkIj48c3BhbiBjbGFzcz0iZW4iPuKWtiBIZWFyIOKAnGZyb2figJ08L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+4pa2IOOAjGZyb2fjgI3jgpLogZ7jgY88L3NwYW4+PC9idXR0b24+CiAgICA8ZGl2IGNsYXNzPSJhY3Rpb25zIj4KICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGRhdGEtZmVlZGJhY2s9InRyaWVkIj48c3BhbiBjbGFzcz0iZW4iPkkgdHJpZWQgaXQ8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44KE44Gj44Gm44G/44GfPC9zcGFuPjwvYnV0dG9uPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgZGF0YS1mZWVkYmFjaz0ic3R1Y2siPjxzcGFuIGNsYXNzPSJlbiI+SSBnb3Qgc3R1Y2s8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44GG44G+44GP6KiA44GI44Gq44GL44Gj44GfPC9zcGFuPjwvYnV0dG9uPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9InByaW1hcnkiIGRhdGEtbmV4dD48c3BhbiBjbGFzcz0iZW4iPlNlZSB0aGUgZmFtaWx5IGFjdGl2aXR5PC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBiuOBhuOBoeOBp+OBrumBiuOBs+OCkuimi+OCizwvc3Bhbj48L2J1dHRvbj4KICAgIDwvZGl2PgogICAgPHAgY2xhc3M9InJlc3BvbnNlIiByb2xlPSJzdGF0dXMiPjwvcD4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gZGF0YS1zdGVwIGhpZGRlbj4KICAgIDxwIGNsYXNzPSJleWVicm93Ij48c3BhbiBjbGFzcz0iZW4iPlRyeSBpdCB0b2dldGhlciBhdCBob21lPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBiuOBhuOBoeOBp+S4gOe3kuOBq+OChOOBo+OBpuOBv+OCiOOBhjwvc3Bhbj48L3A+CiAgICA8aDIgdGFiaW5kZXg9Ii0xIj48c3BhbiBjbGFzcz0iZW4iPlRha2UgdGhlIGZyb2cgb2ZmIHRoZSBzY3JlZW48L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44GK44GG44Gh44Gn44Kr44Ko44Or44GU44Gj44GTPC9zcGFuPjwvaDI+CiAgICA8cD48c3BhbiBjbGFzcz0iZW4iPkhlcmXigJlzIG9uZSB3YXkgRW1tYSBhbmQgYSBwYXJlbnQgY2FuIGtlZXAgZ29pbmcuIFlvdSBjYW4gdHJ5IGl0IHRvZ2V0aGVyLCB0b28uPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOCqOODnuOBqOOBiuOBhuOBoeOBruS6uuOBr+OAgeOBk+OCk+OBquOBteOBhuOBq+e3tOe/kuOCkue2muOBkeOCieOCjOOBvuOBmeOAguOBlOWutuaXj+OBp+OCguOChOOBo+OBpuOBv+OBvuOBl+OCh+OBhuOAgjwvc3Bhbj48L3A+CiAgICA8ZGl2IGNsYXNzPSJhY3Rpdml0eSI+CiAgICAgIDxvbD4KICAgICAgICA8bGk+PHNwYW4gY2xhc3M9ImVuIj5TYXkgPGVtPmZyb2c8L2VtPiBvbmNlIHNvIHlvdXIgY2hpbGQgY2FuIGhlYXIgaXQuPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBvuOBmuOAgeOBiuOBhuOBoeOBruS6uuOBjOOAjGZyb2fjgI3jgajoqIDjgaPjgabjgIHjgYrlrZDjgZXjgpPjgavogZ7jgYvjgZvjgb7jgZnjgII8L3NwYW4+PC9saT4KICAgICAgICA8bGk+PHNwYW4gY2xhc3M9ImVuIj5NYWtlIGEgZnJvZyBob3Agd2l0aCB0d28gZmluZ2VycyBhbmQgbGV0IHlvdXIgY2hpbGQgY29weSB5b3UuPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuaMh+OCkjLmnKzkvb/jgaPjgabjgqvjgqjjg6vjgYzot7Pjgbbjgb7jga3jgpLjgZfjgIHjgYrlrZDjgZXjgpPjgavjgoLjgb7jga3jgZfjgabjgoLjgonjgYTjgb7jgZnjgII8L3NwYW4+PC9saT4KICAgICAgICA8bGk+PHNwYW4gY2xhc3M9ImVuIj5UYWtlIHR1cm5zIHNheWluZyA8ZW0+ZnJvZzwvZW0+IGFzIHlvdXIgZnJvZyBob3BzLiBGaW5pc2ggd2l0aCDigJxZb3UgZ2F2ZSBpdCBhIHRyeSHigJ08L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44Kr44Ko44Or44GM6Lez44G244Gf44Gz44Gr44CB5Lqk5Luj44Gn44CMZnJvZ+OAjeOBqOiogOOBo+OBpuOBv+OBvuOBl+OCh+OBhuOAguacgOW+jOOBr+OAjOOChOOBo+OBpuOBv+OBn+OBre+8geOAjeOBqOWjsOOCkuOBi+OBkeOBvuOBmeOAgjwvc3Bhbj48L2xpPgogICAgICA8L29sPgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJhY3Rpb25zIj48YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9InByaW1hcnkiIGRhdGEtbmV4dD48c3BhbiBjbGFzcz0iZW4iPlRyeSB0aGUgc3R1ZGVudCBleGFtcGxlPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuWtpueUn+WQkeOBkeOBruS9k+mok+OBuDwvc3Bhbj48L2J1dHRvbj48L2Rpdj4KICA8L3NlY3Rpb24+CiAgPHNlY3Rpb24gZGF0YS1zdGVwIGhpZGRlbj4KICAgIDxwIGNsYXNzPSJleWVicm93Ij48c3BhbiBjbGFzcz0iZW4iPlN0dWRlbnRzIMK3IEFuIGludGVydmlldzwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7lrabnlJ8gwrcg6Z2i5o6lPC9zcGFuPjwvcD4KICAgIDxoMiB0YWJpbmRleD0iLTEiPjxzcGFuIGNsYXNzPSJlbiI+RmluZCB5b3VyIGZpcnN0IHNlbnRlbmNlPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPumdouaOpeOBruesrOS4gOWjsOOCkue3tOe/kuOBl+OCiOOBhjwvc3Bhbj48L2gyPgogICAgPHA+PHNwYW4gY2xhc3M9ImVuIj5JbWFnaW5lIHlvdeKAmXZlIGp1c3Qgd2Fsa2VkIGludG8gYW4gaW50ZXJ2aWV3LiBUaGUgaW50ZXJ2aWV3ZXIgc21pbGVzIGFuZCBzYXlzLCDigJxUaGFua3MgZm9yIGNvbWluZyBpbi7igJ08L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+6Z2i5o6l5a6k44Gr5YWl44Gj44Gf44Go44GT44KN44KS5oOz5YOP44GX44Gm44G/44G+44GX44KH44GG44CC6Z2i5o6l5a6Y44GM56yR6aGU44Gn44CM5p2l44Gm44GP44KM44Gm44GC44KK44GM44Go44GG44CN44Go5aOw44KS44GL44GR44G+44GZ44CCPC9zcGFuPjwvcD4KICAgIDxkaXYgY2xhc3M9ImFjdGl2aXR5Ij4KICAgICAgPHA+PHN0cm9uZyBsYW5nPSJlbiI+VGhhbmsgeW91IGZvciBoYXZpbmcgbWUuPC9zdHJvbmc+PGJyPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBiuaLm+OBjeOBhOOBn+OBoOOBjeOAgeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgjwvc3Bhbj48L3A+CiAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWhlYXI9IlRoYW5rIHlvdSBmb3IgaGF2aW5nIG1lLiI+PHNwYW4gY2xhc3M9ImVuIj7ilrYgSGVhciB0aGUgb3BlbmVyPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuKWtiDnrKzkuIDlo7DjgpLogZ7jgY88L3NwYW4+PC9idXR0b24+CiAgICAgIDxwIGNsYXNzPSJyZXNwb25zZSI+PHNwYW4gY2xhc3M9ImVuIj5UYWtlIGEgYnJlYXRoIGFuZCBzYXkgdGhlIGZpcnN0IHNlbnRlbmNlIG91dCBsb3VkLiBPbmNlIGl0IGZlZWxzIGVhc2llciwgYWRkIG9uZSB0aGluZyB5b3XigJlkIGxpa2UgdGhlIGludGVydmlld2VyIHRvIGtub3cgYWJvdXQgeW91Ljwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7jgbLjgajlkbzlkLjjgYrjgYTjgabjgIHmnIDliJ3jga7kuIDmlofjgpLlo7Djgavlh7rjgZfjgb7jgZfjgofjgYbjgILmhaPjgozjgabjgY3jgZ/jgonjgIHpnaLmjqXlrpjjgavnn6XjgaPjgabjgbvjgZfjgYToh6rliIbjga7jgZPjgajjgpLkuIDjgaTku5jjgZHliqDjgYjjgabjgb/jgb7jgZfjgofjgYbjgII8L3NwYW4+PC9wPgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJhY3Rpb25zIj4KICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGRhdGEtZmVlZGJhY2s9InN0dWRlbnRUcmllZCI+PHNwYW4gY2xhc3M9ImVuIj5JIHRyaWVkIGl0PC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOChOOBo+OBpuOBv+OBnzwvc3Bhbj48L2J1dHRvbj4KICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGRhdGEtZmVlZGJhY2s9InN0dWRlbnRTdHVjayI+PHNwYW4gY2xhc3M9ImVuIj5JIGdvdCBzdHVjazwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7jgYbjgb7jgY/oqIDjgYjjgarjgYvjgaPjgZ88L3NwYW4+PC9idXR0b24+CiAgICA8L2Rpdj4KICAgIDxwIGNsYXNzPSJyZXNwb25zZSIgcm9sZT0ic3RhdHVzIj48L3A+CiAgICA8cCBjbGFzcz0icmVzcG9uc2UiPjxzdHJvbmcgY2xhc3M9ImVuIj5UYWtlIGl0IGludG8gcmVhbCBsaWZlLjwvc3Ryb25nPjxzdHJvbmcgY2xhc3M9ImpwIiBsYW5nPSJqYSI+5a6f6Zqb44Gr5L2/44Gj44Gm44G/44KI44GG44CCPC9zdHJvbmc+IDxzcGFuIGNsYXNzPSJlbiI+QXNrIGEgZnJpZW5kLCBwYXJlbnQsIG9yIHRlYWNoZXIgdG8gcGxheSB0aGUgaW50ZXJ2aWV3ZXIgZm9yIG9uZSBtaW51dGUuPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuWPi+OBoOOBoeOChOOBiuOBhuOBoeOBruS6uuOAgeWFiOeUn+OBq+OAgTHliIbjgaDjgZHpnaLmjqXlrpjlvbnjgpLjgYrpoZjjgYTjgZfjgabjgb/jgb7jgZfjgofjgYbjgII8L3NwYW4+PC9wPgogICAgPGRpdiBjbGFzcz0iYWN0aW9ucyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJwcmltYXJ5IiBkYXRhLW5leHQ+PHNwYW4gY2xhc3M9ImVuIj5UcnkgdGhlIGFkdWx0IGV4YW1wbGU8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+5aSn5Lq65ZCR44GR44Gu5L2T6aiT44G4PC9zcGFuPjwvYnV0dG9uPjwvZGl2PgogIDwvc2VjdGlvbj4KICA8c2VjdGlvbiBkYXRhLXN0ZXAgaGlkZGVuPgogICAgPHAgY2xhc3M9ImV5ZWJyb3ciPjxzcGFuIGNsYXNzPSJlbiI+QWR1bHRzIMK3IEF0IGEgY2Fmw6k8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+5aSn5Lq6IMK3IOOCq+ODleOCpzwvc3Bhbj48L3A+CiAgICA8aDIgdGFiaW5kZXg9Ii0xIj48c3BhbiBjbGFzcz0iZW4iPk1ha2UgdGhlIG9yZGVyIHlvdXIgb3duPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuiHquWIhuOBruazqOaWh+OCkuiLseiqnuOBp+S8neOBiOOCiOOBhjwvc3Bhbj48L2gyPgogICAgPHA+PHNwYW4gY2xhc3M9ImVuIj5Zb3XigJlyZSBhdCB0aGUgY291bnRlci4gVGhlIGJhcmlzdGEgYXNrcyB3aGF0IHlvdeKAmWQgbGlrZS4gU3RhcnQgd2l0aCBvbmUgcmVxdWVzdC48L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44Kr44OV44Kn44Gu44Kr44Km44Oz44K/44O844Gn44CB5bqX5ZOh44GV44KT44Gr5rOo5paH44KS6IGe44GL44KM44G+44GX44Gf44CC44G+44Ga44Gv5LiA44Gk44CB6aC844KT44Gn44G/44G+44GX44KH44GG44CCPC9zcGFuPjwvcD4KICAgIDxkaXYgY2xhc3M9ImFjdGl2aXR5Ij4KICAgICAgPHA+PHN0cm9uZyBsYW5nPSJlbiI+Q291bGQgSSBoYXZlIGEgY29mZmVlLCBwbGVhc2U/PC9zdHJvbmc+PGJyPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOCs+ODvOODkuODvOOCkuS4gOadr+OBiumhmOOBhOOBl+OBvuOBmeOAgjwvc3Bhbj48L3A+CiAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWhlYXI9IkNvdWxkIEkgaGF2ZSBhIGNvZmZlZSwgcGxlYXNlPyI+PHNwYW4gY2xhc3M9ImVuIj7ilrYgSGVhciB0aGUgb3JkZXI8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+4pa2IOazqOaWh+OCkuiBnuOBjzwvc3Bhbj48L2J1dHRvbj4KICAgICAgPHAgY2xhc3M9InJlc3BvbnNlIj48c3BhbiBjbGFzcz0iZW4iPlNheSBpdCBvbmNlLiBUaGVuIHN3YXAgaW4gYSBkcmluayB5b3XigJlkIGFjdHVhbGx5IG9yZGVyIGFuZCBzYXkgaXQgYWdhaW4uPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBvuOBmuS4gOW6puOAgeWjsOOBq+WHuuOBl+OBvuOBl+OCh+OBhuOAguasoeOBq+OAgeiHquWIhuOBjOmjsuOBv+OBn+OBhOOCguOBruOBq+abv+OBiOOBpuOAgeOCguOBhuS4gOW6puiogOOBo+OBpuOBv+OBvuOBl+OCh+OBhuOAgjwvc3Bhbj48L3A+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImFjdGlvbnMiPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgZGF0YS1mZWVkYmFjaz0iYWR1bHRUcmllZCI+PHNwYW4gY2xhc3M9ImVuIj5JIHRyaWVkIGl0PC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOChOOBo+OBpuOBv+OBnzwvc3Bhbj48L2J1dHRvbj4KICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGRhdGEtZmVlZGJhY2s9ImFkdWx0U3R1Y2siPjxzcGFuIGNsYXNzPSJlbiI+SSBnb3Qgc3R1Y2s8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+44GG44G+44GP6KiA44GI44Gq44GL44Gj44GfPC9zcGFuPjwvYnV0dG9uPgogICAgPC9kaXY+CiAgICA8cCBjbGFzcz0icmVzcG9uc2UiIHJvbGU9InN0YXR1cyI+PC9wPgogICAgPHAgY2xhc3M9InJlc3BvbnNlIj48c3Ryb25nIGNsYXNzPSJlbiI+VGFrZSBpdCBpbnRvIHJlYWwgbGlmZS48L3N0cm9uZz48c3Ryb25nIGNsYXNzPSJqcCIgbGFuZz0iamEiPuWun+mam+OBq+S9v+OBo+OBpuOBv+OCiOOBhuOAgjwvc3Ryb25nPiA8c3BhbiBjbGFzcz0iZW4iPlByYWN0aXNlIHdpdGggc29tZW9uZSBhdCBob21lLCB0aGVuIHRyeSB5b3VyIHJlcXVlc3QgdGhlIG5leHQgdGltZSB5b3UgY2FuIG9yZGVyIGluIEVuZ2xpc2guPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBiuOBhuOBoeOBp+iqsOOBi+OBqOe3tOe/kuOBl+OBpuOAgeasoeOBq+iLseiqnuOBp+azqOaWh+OBmeOCi+apn+S8muOBjOOBguOCjOOBsOOAgeS9v+OBo+OBpuOBv+OBvuOBl+OCh+OBhuOAgjwvc3Bhbj48L3A+CiAgICA8ZGl2IGNsYXNzPSJhY3Rpb25zIj48YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9InByaW1hcnkiIGRhdGEtbmV4dD48c3BhbiBjbGFzcz0iZW4iPlNlZSB3aGF0IGNvbm5lY3RzIGFsbCB0aHJlZTwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj4z44Gk44Gu5L2T6aiT44Gr5YWx6YCa44GZ44KL44GT44GoPC9zcGFuPjwvYnV0dG9uPjwvZGl2PgogIDwvc2VjdGlvbj4KICA8c2VjdGlvbiBkYXRhLXN0ZXAgaGlkZGVuPgogICAgPHAgY2xhc3M9ImV5ZWJyb3ciPkhlYXIgU2VlIERvIEhvbWU8L3A+CiAgICA8aDIgdGFiaW5kZXg9Ii0xIj5Db25maWRlbmNlIEZpcnN0LiBIdW1hbml0eSBBbHdheXMuPC9oMj4KICAgIDxwPjxzcGFuIGNsYXNzPSJlbiI+QSBjaGlsZCBzYXlzIGEgd29yZCBkdXJpbmcgcGxheS4gQSBzdHVkZW50IG9wZW5zIGFuIGludGVydmlldy4gQW4gYWR1bHQgb3JkZXJzIGEgZHJpbmsuIEVhY2ggaGVhcnMgYSBtb2RlbCwgc2VlcyB3aGVyZSBpdCBmaXRzLCBhbmQgdHJpZXMgb25lIHNtYWxsIHN0ZXAgYmVmb3JlIHVzaW5nIGl0IHdpdGggYSByZWFsIHBlcnNvbi48L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+5a2Q44Gp44KC44Gv6YGK44Gz44Gq44GM44KJ6KiA6JGJ44KS5Y+j44Gr44GX44CB5a2m55Sf44Gv6Z2i5o6l44Gu56ys5LiA5aOw44KS57e057+S44GX44CB5aSn5Lq644Gv6aOy44G/54mp44KS5rOo5paH44GX44G+44GZ44CC44Gp44Gu5L2T6aiT44Gn44KC44CB44G+44Ga44GK5omL5pys44KS6IGe44GN44CB5L2/44GG5aC06Z2i44KS55+l44KK44CB5bCP44GV44GP6Kmm44GX44Gm44GL44KJ44CB5a6f6Zqb44Gu5Lya6Kmx44Gn5L2/44Gj44Gm44G/44G+44GZ44CCPC9zcGFuPjwvcD4KICAgIDxkaXYgY2xhc3M9ImFjdGl2aXR5Ij4KICAgICAgPHA+PHN0cm9uZyBjbGFzcz0iZW4iPlNlbGYtZ3VpZGVkIHByYWN0aWNlIGF0IGhvbWU8L3N0cm9uZz48c3Ryb25nIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOBiuOBhuOBoeOBp+iHquWIhuOBruODmuODvOOCueOBp+e3tOe/kjwvc3Ryb25nPjxicj48c3BhbiBjbGFzcz0iZW4iPlRoZSBwbGFubmVkIEhvbWUgU3RhcnQgbWVtYmVyc2hpcCBjb3ZlcnMgb25lIHBhdGh3YXkuIEhvbWUgRmFtaWx5IGFuZCBIb21lIENvbXBsZXRlIGFyZSBwbGFubmVkIHRvIGNvdmVyIEtpZHMsIFN0dWRlbnQsIGFuZCBBZHVsdCBwcmFjdGljZSwgaW5jbHVkaW5nIFNpcCBTcGVhayBMZWFybiBhbmQgdGhlIENvbmZpZGVuY2UgRmlyc3Qgc2VyaWVzLjwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj5Ib21lIFN0YXJ044Gv44CBMeOBpOOBruWtpue/kuOCs+ODvOOCueOCkuOBlOWIqeeUqOOBhOOBn+OBoOOBkeOCi+S6iOWumuOBp+OBmeOAgkhvbWUgRmFtaWx544GoSG9tZSBDb21wbGV0ZeOBp+OBr+OAgeWtkOOBqeOCguODu+WtpueUn+ODu+Wkp+S6uuWQkeOBkeOBrue3tOe/kuOBq+WKoOOBiOOAgVNpcCBTcGVhayBMZWFybuOBqENvbmZpZGVuY2UgRmlyc3Tjgrfjg6rjg7zjgrrjgoLjgZTliKnnlKjjgYTjgZ/jgaDjgZHjgovkuojlrprjgafjgZnjgII8L3NwYW4+PC9wPgogICAgICA8cD48c3Ryb25nIGNsYXNzPSJlbiI+U3VwcG9ydGVkIGNvdXJzZXMgZm9yIG9uZSBsZWFybmVyPC9zdHJvbmc+PHN0cm9uZyBjbGFzcz0ianAiIGxhbmc9ImphIj7kuIDkurrjgbLjgajjgorjgpLjgrXjg53jg7zjg4jjgZnjgovjgrPjg7zjgrk8L3N0cm9uZz48YnI+PHNwYW4gY2xhc3M9ImVuIj5UaGUgcGxhbm5lZCBLaWRzIGFuZCBTdHVkZW50IEludGVuc2l2ZXMsIFNpcCBTcGVhayBMZWFybiwgYW5kIENvbmZpZGVuY2UgRmlyc3QgQmx1ZXByaW50IGFyZSBzZXBhcmF0ZSAxMi13ZWVrIHByb2dyYW1tZXMuIEEgbW9udGhseSBtZW1iZXJzaGlwIGlzIG9wdGlvbmFsLjwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7lrZDjganjgoLjg7vlrabnlJ/lkJHjgZHpm4bkuK3jgrPjg7zjgrnjgIFTaXAgU3BlYWsgTGVhcm7jgIFDb25maWRlbmNlIEZpcnN0IEJsdWVwcmludOOBr+OAgeOBneOCjOOBnuOCjOWIpeOBq+eUs+OBl+i+vOOCgeOCizEy6YCx6ZaT44Gu44Kz44O844K544KS5LqI5a6a44GX44Gm44GE44G+44GZ44CC5pyI6aGN5Lya5ZOh44G444Gu55m76Yyy44Gv5Lu75oSP44Gn44GZ44CCPC9zcGFuPjwvcD4KICAgIDwvZGl2PgogICAgPHAgY2xhc3M9Im11dGVkIj48c3BhbiBjbGFzcz0iZW4iPldl4oCZcmUgc3RhcnRpbmcgd2l0aCBpbnZpdGF0aW9uLW9ubHkgRm91bmRpbmcgRmFtaWx5IEFjY2Vzcy4gTW9yZSBwbGFucyBhcmUgY29taW5nLjwvc3Bhbj48c3BhbiBjbGFzcz0ianAiIGxhbmc9ImphIj7jgb7jgZrjga/mi5vlvoXliLbjga7libXoqK3jg5XjgqHjg5/jg6rjg7zjgqLjgq/jgrvjgrnjgYvjgonlp4vjgb7jgorjgb7jgZnjgILjgbvjgYvjga7jg5fjg6njg7PjgoLku4rlvozjgZTmoYjlhoXjgZfjgb7jgZnjgII8L3NwYW4+PC9wPgogICAgPHAgY2xhc3M9Im11dGVkIj48c3BhbiBjbGFzcz0iZW4iPsKlMSw1MDAgcGVyIG1vbnRoICsgwqUxLDAwMCBvbmUtdGltZSBzZXR1cCBmb3IgbmV3IGFjY291bnRzLCB0YXggaW5jbHVkZWQ8L3NwYW4+PHNwYW4gY2xhc3M9ImpwIiBsYW5nPSJqYSI+5pyI6aGNIMKlMSw1MDAg77yLIOaWsOimj+OCouOCq+OCpuODs+ODiOOBruWIneWbnuioreWumuiyuyDCpTEsMDAw77yI56iO6L6877yJPC9zcGFuPjwvcD4KICAgIDxkaXYgY2xhc3M9ImFjdGlvbnMiPgogICAgICA8YSBjbGFzcz0iYnV0dG9uIHByaW1hcnkiIGhyZWY9Ii8jZm91bmRpbmciPjxzcGFuIGNsYXNzPSJlbiI+UmVxdWVzdCBGb3VuZGluZyBGYW1pbHkgQWNjZXNzPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuWJteioreODleOCoeODn+ODquODvOOCouOCr+OCu+OCueOCkueUs+OBl+i+vOOCgDwvc3Bhbj48L2E+CiAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBpZD0icmVwbGF5Ij48c3BhbiBjbGFzcz0iZW4iPlJlcGxheSBkZW1vPC9zcGFuPjxzcGFuIGNsYXNzPSJqcCIgbGFuZz0iamEiPuOCguOBhuS4gOW6puS9k+mok+OBmeOCizwvc3Bhbj48L2J1dHRvbj4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KPC9tYWluPgo8c2NyaXB0PgogIGNvbnN0IHN0ZXBzID0gQXJyYXkuZnJvbShkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdbZGF0YS1zdGVwXScpKTsKICBjb25zdCBsYW5ndWFnZUJ1dHRvbnMgPSBBcnJheS5mcm9tKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ1tkYXRhLWxhbmddJykpOwogIGNvbnN0IGF1ZGlvID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3dvcmQtYXVkaW8nKTsKICBjb25zdCBmZWVkYmFja0NvcHkgPSB7CiAgICB0cmllZDogeyBlbjogJ1lvdSBnYXZlIGl0IGEgZ28hIEhvdyBkaWQgdGhhdCBmZWVsPycsIGpwOiAn44KE44Gj44Gm44G/44Gf44Gt77yB44Gp44KT44Gq5rCX5oyB44Gh44Gg44Gj44Gf77yfJyB9LAogICAgc3R1Y2s6IHsgZW46ICdUYWtlIHlvdXIgdGltZS4gWW91IGNhbiBsaXN0ZW4gYWdhaW4gb3IgdHJ5IHRoZSBhY3Rpdml0eSB0b2dldGhlci4nLCBqcDogJ+OChuOBo+OBj+OCiuOBp+Wkp+S4iOWkq+OAguOCguOBhuS4gOW6puiBnuOBhOOBpuOCguOBhOOBhOOBl+OAgeOBiuOBhuOBoeOBruS6uuOBqOS4gOe3kuOBq+OChOOBo+OBpuOBv+OBpuOCguOBhOOBhOOCiOOAgicgfSwKICAgIHN0dWRlbnRUcmllZDogeyBlbjogJ1lvdSBzdGFydGVkIHRoZSBjb252ZXJzYXRpb24uIFdoYXQgd291bGQgeW91IHdhbnQgdGhlbSB0byBrbm93IGFib3V0IHlvdSBuZXh0PycsIGpwOiAn5Lya6Kmx44KS5aeL44KB44KJ44KM44Gf44Gt44CC5qyh44Gv44CB6Ieq5YiG44Gu44Gp44KT44Gq44GT44Go44KS5Lyd44GI44Gf44GE77yfJyB9LAogICAgc3R1ZGVudFN0dWNrOiB7IGVuOiAnU3RhcnQgd2l0aCDigJxUaGFuayB5b3Uu4oCdIEFkZCB0aGUgcmVzdCB3aGVuIHlvdSBmZWVsIHJlYWR5LicsIGpwOiAn44G+44Ga44Gv44CMVGhhbmsgeW9144CN44GL44KJ44CC6KiA44GI44Gd44GG44Gr44Gq44Gj44Gf44KJ44CB57aa44GN44KS6Laz44GX44Gm44G/44KI44GG44CCJyB9LAogICAgYWR1bHRUcmllZDogeyBlbjogJ1lvdSBtYWRlIGEgcmVxdWVzdC4gVHJ5IGl0IG9uY2Ugd2l0aCB5b3VyIHVzdWFsIG9yZGVyLicsIGpwOiAn5rOo5paH44Gn44GN44Gf44Gt44CC5LuK5bqm44Gv44CB44GE44Gk44KC6aC844KA44KC44Gu44Gn6KiA44Gj44Gm44G/44KI44GG44CCJyB9LAogICAgYWR1bHRTdHVjazogeyBlbjogJ1RyeSDigJxBIGNvZmZlZSwgcGxlYXNlLuKAnSBZb3UgY2FuIGJ1aWxkIHVwIHRvIHRoZSBsb25nZXIgdmVyc2lvbi4nLCBqcDogJ+OBvuOBmuOBr+OAjEEgY29mZmVlLCBwbGVhc2Uu44CN44Gn5aSn5LiI5aSr44CC5oWj44KM44Gf44KJ44CB6ZW344GE6KiA44GE5pa544KC6Kmm44GX44Gm44G/44KI44GG44CCJyB9LAogICAgbW9kZWxVbmF2YWlsYWJsZTogeyBlbjogJ0FzayBzb21lb25lIHRvIHJlYWQgdGhlIGxpbmUgYWxvdWQsIG9yIHJlYWQgaXQgb25jZSBiZWZvcmUgeW91IHRyeS4nLCBqcDogJ+iqsOOBi+OBq+iqreOCk+OBp+OCguOCieOBhuOBi+OAgeiHquWIhuOBp+S4gOW6puiqreOCk+OBp+OBi+OCieiogOOBo+OBpuOBv+OBvuOBl+OCh+OBhuOAgicgfSwKICAgIGF1ZGlvOiB7IGVuOiAnVGhlIGF1ZGlvIGlzIHVuYXZhaWxhYmxlLiBZb3UgY2FuIHNheSDigJxmcm9n4oCdIHRvZ2V0aGVyIGFuZCBrZWVwIGdvaW5nLicsIGpwOiAn6Z+z5aOw44KS5YaN55Sf44Gn44GN44G+44Gb44KT44CC5LiA57eS44Gr44CMZnJvZ+OAjeOBqOiogOOBo+OBpuOAgeasoeOBq+mAsuOCgeOBvuOBmeOAgicgfQogIH07CiAgbGV0IHN0ZXAgPSAwOwogIGxldCBsYW5ndWFnZSA9ICdlbic7CiAgY29uc3QgcmVzcG9uc2VzID0gbmV3IE1hcCgpOwogIGxldCBzdG9wTW9kZWwgPSAoKSA9PiB7fTsKCiAgZnVuY3Rpb24gcmVuZGVyRmVlZGJhY2soKSB7CiAgICBjb25zdCBmZWVkYmFjayA9IHN0ZXBzW3N0ZXBdLnF1ZXJ5U2VsZWN0b3IoJ1tyb2xlPSJzdGF0dXMiXScpOwogICAgY29uc3QgcmVzcG9uc2UgPSByZXNwb25zZXMuZ2V0KHN0ZXApOwogICAgaWYgKGZlZWRiYWNrKSBmZWVkYmFjay50ZXh0Q29udGVudCA9IHJlc3BvbnNlID8gZmVlZGJhY2tDb3B5W3Jlc3BvbnNlXVtsYW5ndWFnZV0gOiAnJzsKICB9CgogIGZ1bmN0aW9uIHNldExhbmd1YWdlKG5leHRMYW5ndWFnZSkgewogICAgbGFuZ3VhZ2UgPSBuZXh0TGFuZ3VhZ2U7CiAgICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQubGFuZyA9IGxhbmd1YWdlID09PSAnanAnID8gJ2phJyA6ICdlbic7CiAgICBsYW5ndWFnZUJ1dHRvbnMuZm9yRWFjaCgoYnV0dG9uKSA9PiB7CiAgICAgIGJ1dHRvbi5zZXRBdHRyaWJ1dGUoJ2FyaWEtcHJlc3NlZCcsIFN0cmluZyhidXR0b24uZGF0YXNldC5sYW5nID09PSBsYW5ndWFnZSkpOwogICAgfSk7CiAgICB0cnkgeyBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnaHNkLWxhbmRpbmctbGFuZycsIGxhbmd1YWdlKTsgfSBjYXRjaCB7fQogICAgcmVuZGVyRmVlZGJhY2soKTsKICB9CgogIGZ1bmN0aW9uIHNob3dTdGVwKG5leHRTdGVwKSB7CiAgICBhdWRpby5wYXVzZSgpOwogICAgc3RvcE1vZGVsKCk7CiAgICBzdGVwc1tzdGVwXS5oaWRkZW4gPSB0cnVlOwogICAgc3RlcCA9IG5leHRTdGVwOwogICAgc3RlcHNbc3RlcF0uaGlkZGVuID0gZmFsc2U7CiAgICByZW5kZXJGZWVkYmFjaygpOwogICAgc3RlcHNbc3RlcF0ucXVlcnlTZWxlY3RvcignaDEsIGgyJykuZm9jdXMoKTsKICB9CgogIGxldCBzYXZlZExhbmd1YWdlOwogIHRyeSB7IHNhdmVkTGFuZ3VhZ2UgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnaHNkLWxhbmRpbmctbGFuZycpOyB9IGNhdGNoIHt9CiAgc2V0TGFuZ3VhZ2Uoc2F2ZWRMYW5ndWFnZSA9PT0gJ2VuJyB8fCBzYXZlZExhbmd1YWdlID09PSAnanAnCiAgICA/IHNhdmVkTGFuZ3VhZ2UKICAgIDogbmF2aWdhdG9yLmxhbmd1YWdlLnRvTG93ZXJDYXNlKCkuc3RhcnRzV2l0aCgnamEnKSA/ICdqcCcgOiAnZW4nKTsKICBsYW5ndWFnZUJ1dHRvbnMuZm9yRWFjaCgoYnV0dG9uKSA9PiBidXR0b24uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiBzZXRMYW5ndWFnZShidXR0b24uZGF0YXNldC5sYW5nKSkpOwogIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNsYW5ndWFnZXMnKS5oaWRkZW4gPSBmYWxzZTsKCiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnW2RhdGEtbmV4dF0nKS5mb3JFYWNoKChidXR0b24pID0+IHsKICAgIGJ1dHRvbi5oaWRkZW4gPSBmYWxzZTsKICAgIGJ1dHRvbi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHNob3dTdGVwKHN0ZXAgKyAxKSk7CiAgfSk7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI2hlYXItd29yZCcpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgYXN5bmMgKCkgPT4gewogICAgdHJ5IHsKICAgICAgYXVkaW8uY3VycmVudFRpbWUgPSAwOwogICAgICBhd2FpdCBhdWRpby5wbGF5KCk7CiAgICB9IGNhdGNoIChlcnJvcikgewogICAgICBpZiAoZXJyb3IubmFtZSA9PT0gJ0Fib3J0RXJyb3InIHx8IHN0ZXAgIT09IDEpIHJldHVybjsKICAgICAgcmVzcG9uc2VzLnNldChzdGVwLCAnYXVkaW8nKTsKICAgICAgcmVuZGVyRmVlZGJhY2soKTsKICAgIH0KICB9KTsKICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdbZGF0YS1mZWVkYmFja10nKS5mb3JFYWNoKChidXR0b24pID0+IHsKICAgIGJ1dHRvbi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHsKICAgICAgcmVzcG9uc2VzLnNldChzdGVwLCBidXR0b24uZGF0YXNldC5mZWVkYmFjayk7CiAgICAgIHJlbmRlckZlZWRiYWNrKCk7CiAgICB9KTsKICB9KTsKICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdbZGF0YS1oZWFyXScpLmZvckVhY2goKGJ1dHRvbikgPT4gewogICAgYnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogICAgICBjb25zdCBzeW50aCA9IHdpbmRvdy5zcGVlY2hTeW50aGVzaXM7CiAgICAgIGNvbnN0IHZvaWNlID0gc3ludGg/LmdldFZvaWNlcygpLmZpbmQoKGNhbmRpZGF0ZSkgPT4gY2FuZGlkYXRlLmxvY2FsU2VydmljZSAmJiAvXmVuKD86LXwkKS9pLnRlc3QoY2FuZGlkYXRlLmxhbmcpKTsKICAgICAgaWYgKCF2b2ljZSkgewogICAgICAgIHJlc3BvbnNlcy5zZXQoc3RlcCwgJ21vZGVsVW5hdmFpbGFibGUnKTsKICAgICAgICByZW5kZXJGZWVkYmFjaygpOwogICAgICAgIHJldHVybjsKICAgICAgfQogICAgICBjb25zdCBtb2RlbCA9IG5ldyBTcGVlY2hTeW50aGVzaXNVdHRlcmFuY2UoYnV0dG9uLmRhdGFzZXQuaGVhcik7CiAgICAgIG1vZGVsLnZvaWNlID0gdm9pY2U7CiAgICAgIG1vZGVsLmxhbmcgPSB2b2ljZS5sYW5nOwogICAgICBtb2RlbC5yYXRlID0gMC45OwogICAgICBjb25zdCBtb2RlbFN0ZXAgPSBzdGVwOwogICAgICBtb2RlbC5vbmVycm9yID0gKHtlcnJvcn0pID0+IHsKICAgICAgICBpZiAoc3RlcCAhPT0gbW9kZWxTdGVwIHx8IGVycm9yID09PSAnaW50ZXJydXB0ZWQnIHx8IGVycm9yID09PSAnY2FuY2VsZWQnKSByZXR1cm47CiAgICAgICAgcmVzcG9uc2VzLnNldChzdGVwLCAnbW9kZWxVbmF2YWlsYWJsZScpOwogICAgICAgIHJlbmRlckZlZWRiYWNrKCk7CiAgICAgIH07CiAgICAgIHN5bnRoLmNhbmNlbCgpOwogICAgICBzdG9wTW9kZWwgPSAoKSA9PiBzeW50aC5jYW5jZWwoKTsKICAgICAgc3ludGguc3BlYWsobW9kZWwpOwogICAgfSk7CiAgfSk7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3JlcGxheScpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogICAgcmVzcG9uc2VzLmNsZWFyKCk7CiAgICBzaG93U3RlcCgwKTsKICB9KTsKPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo=
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Try Hear See Do Home across three everyday moments for children, students, and adults.">
+<title>Hear See Do Home Demo</title>
+<style>
+  :root { color-scheme: dark; font: 100%/1.6 system-ui, sans-serif; color: #fff6e6; background: #10172a; }
+  * { box-sizing: border-box; }
+  [hidden], html[lang="en"] .jp, html[lang="ja"] .en { display: none !important; }
+  body { margin: 0; background: radial-gradient(ellipse at top, #263b5a, transparent 65%); min-height: 100vh; }
+  header, main { width: min(100% - 2rem, 52rem); margin: auto; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: 1rem 0; }
+  header a { color: inherit; font-weight: 800; }
+  main { padding: 1rem 0 2rem; }
+  section { border: 1px solid #536585; background: #151f34; border-radius: 1.5rem; padding: clamp(1.2rem, 5vw, 2.8rem); }
+  h1, h2 { line-height: 1.15; margin: 0 0 1rem; font-size: clamp(1.9rem, 6vw, 3.2rem); text-wrap: balance; }
+  p { margin: 0 0 1rem; max-width: 46ch; }
+  .eyebrow { color: #ffda85; font-weight: 800; margin-bottom: .6rem; }
+  .muted { color: #d1daec; }
+  .scene { display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+  .scene img { width: 100%; height: 12rem; object-fit: contain; }
+  .actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+  button, .button { cursor: pointer; display: inline-block; font: inherit; font-weight: 750; border: 1px solid #8394b1; border-radius: .7rem; padding: .55rem .85rem; color: inherit; background: #23324d; text-decoration: none; min-height: 44px; }
+  .primary { background: #ffda85; color: #1f1a10; border-color: #ffda85; }
+  button[aria-pressed="true"] { border-color: #ffda85; color: #ffda85; }
+  :focus-visible { outline: 3px solid #9be6ff; outline-offset: 4px; }
+  .word { display: block; font-size: 2.6rem; line-height: 1.3; font-weight: 800; }
+  .response { margin-top: 1rem; }
+  .response:empty { margin: 0; }
+  .activity { padding: 1rem 1.25rem; background: #23324d; border-radius: .8rem; margin-bottom: 1rem; }
+  .activity ol { padding-left: 1.4rem; margin: 0; }
+  .activity li + li { margin-top: .45rem; }
+  .pathway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .pathway-card { background: #23324d; border-radius: .8rem; padding: 1rem; }
+  .pathway-card img { display: block; width: 100%; height: auto; border-radius: .55rem; }
+  .pathway-card h3 { margin: .75rem 0 .35rem; }
+  .pathway-card ul { padding-left: 1.25rem; }
+  .pathway-card li + li { margin-top: .4rem; }
+  .pathway-card a:not(.button) { color: #b8ecff; }
+  @media (max-width: 31rem) {
+    .scene { grid-template-columns: 1fr; }
+    .scene img { height: 8rem; justify-self: start; width: 7rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a href="/">Hear See Do Home</a>
+  <div id="languages" hidden>
+    <button type="button" data-lang="en" lang="en">EN</button>
+    <button type="button" data-lang="jp" lang="ja">日本語</button>
+  </div>
+</header>
+<main>
+  <section data-step>
+    <p class="eyebrow"><span class="en">Three ways to build speaking confidence</span><span class="jp" lang="ja">英語を話す自信を育てる3つの体験</span></p>
+    <div class="scene">
+      <div>
+        <h1 tabindex="-1"><span class="en">Bring Hear See Do home</span><span class="jp" lang="ja">Hear See Doを、おうちへ。</span></h1>
+        <p class="en">Emma knows the word <em>frog</em>. When it’s time to say it out loud, she freezes. What would make it easier for her to try?</p>
+        <p class="jp" lang="ja">エマは「frog」という言葉を知っています。でも、声に出そうとすると、言葉が出てきません。どうすれば、少し気楽に挑戦できるでしょうか？</p>
+        <p class="muted"><span class="en">Start with Emma, then try an interview opener and a café order. Jona is the practice guide coming to Hear See Do Home.</span><span class="jp" lang="ja">エマの体験から始めて、面接の第一声とカフェでの注文にも挑戦しましょう。ジョナはHear See Do Homeに登場予定の練習ガイドです。</span></p>
+      </div>
+      <img src="/demo/emma.webp" alt="" width="1024" height="1536">
+    </div>
+    <div class="actions">
+      <button type="button" class="primary" data-next hidden><span class="en">Start the demo</span><span class="jp" lang="ja">体験を始める</span></button>
+      <button type="button" data-apps hidden><span class="en">See pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></button>
+      <a class="button" href="/#founding"><span class="en">Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセス</span></a>
+    </div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Hear · See · Do</span><span class="jp" lang="ja">聞く・見る・やってみる</span></p>
+    <div class="scene">
+      <div>
+        <h2 tabindex="-1"><span class="en">One small try with Jona</span><span class="jp" lang="ja">ジョナと一緒に、小さな一歩</span></h2>
+        <p class="word"><span aria-hidden="true">🐸</span> <span lang="en">frog</span></p>
+        <p><span class="en">“Listen to the word, look at the frog, then try saying it out loud. Take your time.”</span><span class="jp" lang="ja">「言葉を聞いて、カエルを見て、声に出してみよう。ゆっくりでいいよ。」</span></p>
+      </div>
+      <img src="/demo/jona.webp" alt="" width="1024" height="1536">
+    </div>
+    <audio id="word-audio" src="/demo/frog.mp3" preload="none"></audio>
+    <button type="button" id="hear-word"><span class="en">▶ Hear “frog”</span><span class="jp" lang="ja">▶ 「frog」を聞く</span></button>
+    <div class="actions">
+      <button type="button" data-feedback="tried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="stuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+      <button type="button" class="primary" data-next><span class="en">See the family activity</span><span class="jp" lang="ja">おうちでの遊びを見る</span></button>
+    </div>
+    <p class="response" role="status"></p>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Try it together at home</span><span class="jp" lang="ja">おうちで一緒にやってみよう</span></p>
+    <h2 tabindex="-1"><span class="en">Take the frog off the screen</span><span class="jp" lang="ja">おうちでカエルごっこ</span></h2>
+    <p><span class="en">Here’s one way Emma and a parent can keep going. You can try it together, too.</span><span class="jp" lang="ja">エマとおうちの人は、こんなふうに練習を続けられます。ご家族でもやってみましょう。</span></p>
+    <div class="activity">
+      <ol>
+        <li><span class="en">Say <em>frog</em> once so your child can hear it.</span><span class="jp" lang="ja">まず、おうちの人が「frog」と言って、お子さんに聞かせます。</span></li>
+        <li><span class="en">Make a frog hop with two fingers and let your child copy you.</span><span class="jp" lang="ja">指を2本使ってカエルが跳ぶまねをし、お子さんにもまねしてもらいます。</span></li>
+        <li><span class="en">Take turns saying <em>frog</em> as your frog hops. Finish with “You gave it a try!”</span><span class="jp" lang="ja">カエルが跳ぶたびに、交代で「frog」と言ってみましょう。最後は「やってみたね！」と声をかけます。</span></li>
+      </ol>
+    </div>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">Try the student example</span><span class="jp" lang="ja">学生向けの体験へ</span></button> <button type="button" data-apps="family"><span class="en">See Family apps</span><span class="jp" lang="ja">ファミリー向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Students · An interview</span><span class="jp" lang="ja">学生 · 面接</span></p>
+    <h2 tabindex="-1"><span class="en">Find your first sentence</span><span class="jp" lang="ja">面接の第一声を練習しよう</span></h2>
+    <p><span class="en">Imagine you’ve just walked into an interview. The interviewer smiles and says, “Thanks for coming in.”</span><span class="jp" lang="ja">面接室に入ったところを想像してみましょう。面接官が笑顔で「来てくれてありがとう」と声をかけます。</span></p>
+    <div class="activity">
+      <p><strong lang="en">Thank you for having me.</strong><br><span class="jp" lang="ja">お招きいただき、ありがとうございます。</span></p>
+      <button type="button" data-hear="Thank you for having me."><span class="en">▶ Hear the opener</span><span class="jp" lang="ja">▶ 第一声を聞く</span></button>
+      <p class="response"><span class="en">Take a breath and say the first sentence out loud. Once it feels easier, add one thing you’d like the interviewer to know about you.</span><span class="jp" lang="ja">ひと呼吸おいて、最初の一文を声に出しましょう。慣れてきたら、面接官に知ってほしい自分のことを一つ付け加えてみましょう。</span></p>
+    </div>
+    <div class="actions">
+      <button type="button" data-feedback="studentTried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="studentStuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+    </div>
+    <p class="response" role="status"></p>
+    <p class="response"><strong class="en">Take it into real life.</strong><strong class="jp" lang="ja">実際に使ってみよう。</strong> <span class="en">Ask a friend, parent, or teacher to play the interviewer for one minute.</span><span class="jp" lang="ja">友だちやおうちの人、先生に、1分だけ面接官役をお願いしてみましょう。</span></p>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">Try the adult example</span><span class="jp" lang="ja">大人向けの体験へ</span></button> <button type="button" data-apps="student"><span class="en">See Student apps</span><span class="jp" lang="ja">学生向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Adults · At a café</span><span class="jp" lang="ja">大人 · カフェ</span></p>
+    <h2 tabindex="-1"><span class="en">Make the order your own</span><span class="jp" lang="ja">自分の注文を英語で伝えよう</span></h2>
+    <p><span class="en">You’re at the counter. The barista asks what you’d like. Start with one request.</span><span class="jp" lang="ja">カフェのカウンターで、店員さんに注文を聞かれました。まずは一つ、頼んでみましょう。</span></p>
+    <div class="activity">
+      <p><strong lang="en">Could I have a coffee, please?</strong><br><span class="jp" lang="ja">コーヒーを一杯お願いします。</span></p>
+      <button type="button" data-hear="Could I have a coffee, please?"><span class="en">▶ Hear the order</span><span class="jp" lang="ja">▶ 注文を聞く</span></button>
+      <p class="response"><span class="en">Say it once. Then swap in a drink you’d actually order and say it again.</span><span class="jp" lang="ja">まず一度、声に出しましょう。次に、自分が飲みたいものに替えて、もう一度言ってみましょう。</span></p>
+    </div>
+    <div class="actions">
+      <button type="button" data-feedback="adultTried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="adultStuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+    </div>
+    <p class="response" role="status"></p>
+    <p class="response"><strong class="en">Take it into real life.</strong><strong class="jp" lang="ja">実際に使ってみよう。</strong> <span class="en">Practise with someone at home, then try your request the next time you can order in English.</span><span class="jp" lang="ja">おうちで誰かと練習して、次に英語で注文する機会があれば、使ってみましょう。</span></p>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">See what connects all three</span><span class="jp" lang="ja">3つの体験に共通すること</span></button> <button type="button" data-apps="adult"><span class="en">See Adult apps</span><span class="jp" lang="ja">大人向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow">Hear See Do Home</p>
+    <h2 tabindex="-1">Confidence First. Humanity Always.</h2>
+    <p><span class="en">A child says a word during play. A student opens an interview. An adult orders a drink. Each hears a model, sees where it fits, and tries one small step before using it with a real person.</span><span class="jp" lang="ja">子どもは遊びながら言葉を口にし、学生は面接の第一声を練習し、大人は飲み物を注文します。どの体験でも、まずお手本を聞き、使う場面を知り、小さく試してから、実際の会話で使ってみます。</span></p>
+    <div class="activity">
+      <p><strong class="en">Self-guided practice at home</strong><strong class="jp" lang="ja">おうちで自分のペースで練習</strong><br><span class="en">The planned Home Start membership covers one pathway. Home Family and Home Complete are planned to cover Kids, Student, and Adult practice, including Sip Speak Learn and the Confidence First series.</span><span class="jp" lang="ja">Home Startは、1つの学習コースをご利用いただける予定です。Home FamilyとHome Completeでは、子ども・学生・大人向けの練習に加え、Sip Speak LearnとConfidence Firstシリーズもご利用いただける予定です。</span></p>
+      <p><strong class="en">Supported courses for one learner</strong><strong class="jp" lang="ja">一人ひとりをサポートするコース</strong><br><span class="en">The planned Kids and Student Intensives, Sip Speak Learn, and Confidence First Blueprint are separate 12-week programmes. A monthly membership is optional.</span><span class="jp" lang="ja">子ども・学生向け集中コース、Sip Speak Learn、Confidence First Blueprintは、それぞれ別に申し込める12週間のコースを予定しています。月額会員への登録は任意です。</span></p>
+    </div>
+    <p class="muted"><span class="en">We’re starting with invitation-only Founding Family Access. More plans are coming.</span><span class="jp" lang="ja">まずは招待制の創設ファミリーアクセスから始まります。ほかのプランも今後ご案内します。</span></p>
+    <p class="muted"><span class="en">¥1,500 per month + ¥1,000 one-time setup for new accounts, tax included</span><span class="jp" lang="ja">月額 ¥1,500 ＋ 新規アカウントの初回設定費 ¥1,000（税込）</span></p>
+    <div class="actions">
+      <a class="button primary" href="/#founding"><span class="en">Request Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセスを申し込む</span></a>
+      <button type="button" data-apps><span class="en">See pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></button>
+      <button type="button" id="replay"><span class="en">Replay demo</span><span class="jp" lang="ja">もう一度体験する</span></button>
+    </div>
+  </section>
+  <section data-step id="app-guide" hidden>
+    <p class="eyebrow">Hear See Do Home</p>
+    <h2 tabindex="-1"><span class="en">Explore the pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></h2>
+    <p><span class="en">These cards show where each activity leads. App links require sign-in and access on your account. If you land on the sign-in screen, sign in and choose the pathway shown on the card.</span><span class="jp" lang="ja">各体験の続きは、下のカードでご案内します。アプリの利用にはログインとアカウントの利用権限が必要です。ログイン画面が開いたら、ログイン後にカードに記載された学習コースを選んでください。</span></p>
+    <div class="pathway-grid">
+      <article class="pathway-card" id="apps-family">
+        <img src="/demo/pathway-family.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Kids &amp; Family</span><span class="jp" lang="ja">子ども・ファミリー</span></h3>
+        <p class="eyebrow"><span class="en">Invitation-only Family beta</span><span class="jp" lang="ja">招待制ファミリーベータ</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/family/activity/hear-phonics-app">Monkey Yoga Phonics™</a><span class="en"> — sounds, words, and movement, like the frog activity.</span><span class="jp" lang="ja"> — カエルの体験のように、音や言葉を体の動きと一緒に練習します。</span></li>
+          <li><strong>Monkeys Talk &amp; Unlock™</strong><span class="en"> — a preview of guided speaking practice. Check your invitation for availability.</span><span class="jp" lang="ja"> — ガイド付きスピーキング練習のプレビューです。利用可否は招待の案内をご確認ください。</span></li>
+        </ul>
+        <a class="button" href="https://app.hsdos.ai/family"><span class="en">Open the Family pathway</span><span class="jp" lang="ja">ファミリーコースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-student">
+        <img src="/demo/pathway-students.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Student</span><span class="jp" lang="ja">学生</span></h3>
+        <p class="eyebrow"><span class="en">Private beta · Account access required</span><span class="jp" lang="ja">プライベートベータ · 利用権限が必要</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/career-ready">Career Ready</a><span class="en"> — interview and career practice.</span><span class="jp" lang="ja"> — 面接や進路に向けた練習。</span></li>
+          <li><a href="https://app.hsdos.ai/global-ready">Global Ready</a><span class="en"> — English for studying abroad and international life.</span><span class="jp" lang="ja"> — 留学や海外生活のための英語。</span></li>
+          <li><a href="https://app.hsdos.ai/speak-ready">Speak Ready</a><span class="en"> — guided speaking practice.</span><span class="jp" lang="ja"> — ガイド付きスピーキング練習。</span></li>
+          <li><strong>EIKEN Monkey</strong><span class="en"> — choose EIKEN from Student Home.</span><span class="jp" lang="ja"> — 学生ホームから英検を選びます。</span></li>
+        </ul>
+        <a class="button" href="https://app.hsdos.ai/student"><span class="en">Open the Student pathway</span><span class="jp" lang="ja">学生コースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-adult">
+        <img src="/demo/pathway-adults.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Adult</span><span class="jp" lang="ja">大人</span></h3>
+        <p class="eyebrow"><span class="en">Private beta · Account access required</span><span class="jp" lang="ja">プライベートベータ · 利用権限が必要</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/sip-speak-learn">Sip Speak Learn</a><span class="en"> — self-guided everyday conversation, like the café order.</span><span class="jp" lang="ja"> — カフェでの注文など、日常会話を自分のペースで練習。</span></li>
+          <li><strong>Confidence First</strong><span class="en"> — the self-guided series is planned for Home Family and Home Complete.</span><span class="jp" lang="ja"> — 自習用シリーズはHome FamilyとHome Completeで提供予定です。</span></li>
+        </ul>
+        <p class="muted"><span class="en">Other summit previews included The Inner Key Blueprint, Speak &amp; Sweat, and Breath &amp; Speak. Check your account for access.</span><span class="jp" lang="ja">サミットではThe Inner Key Blueprint、Speak &amp; Sweat、Breath &amp; Speakも紹介しました。利用可否はアカウントでご確認ください。</span></p>
+        <a class="button" href="https://app.hsdos.ai/adult"><span class="en">Open the Adult pathway</span><span class="jp" lang="ja">大人向けコースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-educator">
+        <img src="/demo/pathway-educators.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Educator</span><span class="jp" lang="ja">教育関係者</span></h3>
+        <p class="eyebrow"><span class="en">Separate access for educators</span><span class="jp" lang="ja">教育関係者向けの別枠アクセス</span></p>
+        <p><span class="en">Seasonal lessons, curriculum, and classroom resources. Educator access is separate from Home memberships.</span><span class="jp" lang="ja">季節のレッスン、カリキュラム、授業用教材を提供します。教育関係者向けの利用枠はHome会員とは別です。</span></p>
+        <a class="button" href="https://app.hsdos.ai/educator"><span class="en">Open the Educator pathway</span><span class="jp" lang="ja">教育関係者向けコースを開く</span></a>
+      </article>
+    </div>
+    <p class="muted"><span class="en">HSD Playroom is being tested separately. The founding invitation explains the apps included on your account before you pay.</span><span class="jp" lang="ja">HSD Playroomは別途テスト中です。お支払い前に、ご利用いただけるアプリを招待のご案内でお知らせします。</span></p>
+    <div class="actions">
+      <button type="button" class="primary" id="return-to-demo"><span class="en">Back to the walkthrough</span><span class="jp" lang="ja">体験に戻る</span></button>
+      <a class="button" href="https://app.hsdos.ai/"><span class="en">Sign in to Hear See Do Home</span><span class="jp" lang="ja">Hear See Do Homeにログイン</span></a>
+      <a class="button" href="/#founding"><span class="en">Request Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセスを申し込む</span></a>
+    </div>
+  </section>
+</main>
+<script>
+  const steps = Array.from(document.querySelectorAll('[data-step]'));
+  const languageButtons = Array.from(document.querySelectorAll('[data-lang]'));
+  const audio = document.querySelector('#word-audio');
+  const feedbackCopy = {
+    tried: { en: 'You gave it a go! How did that feel?', jp: 'やってみたね！どんな気持ちだった？' },
+    stuck: { en: 'Take your time. You can listen again or try the activity together.', jp: 'ゆっくりで大丈夫。もう一度聞いてもいいし、おうちの人と一緒にやってみてもいいよ。' },
+    studentTried: { en: 'You started the conversation. What would you want them to know about you next?', jp: '会話を始められたね。次は、自分のどんなことを伝えたい？' },
+    studentStuck: { en: 'Start with “Thank you.” Add the rest when you feel ready.', jp: 'まずは「Thank you」から。言えそうになったら、続きを足してみよう。' },
+    adultTried: { en: 'You made a request. Try it once with your usual order.', jp: '注文できたね。今度は、いつも頼むもので言ってみよう。' },
+    adultStuck: { en: 'Try “A coffee, please.” You can build up to the longer version.', jp: 'まずは「A coffee, please.」で大丈夫。慣れたら、長い言い方も試してみよう。' },
+    modelUnavailable: { en: 'Ask someone to read the line aloud, or read it once before you try.', jp: '誰かに読んでもらうか、自分で一度読んでから言ってみましょう。' },
+    audio: { en: 'The audio is unavailable. You can say “frog” together and keep going.', jp: '音声を再生できません。一緒に「frog」と言って、次に進めます。' }
+  };
+  let step = 0;
+  let returnStep = 0;
+  let language = 'en';
+  const responses = new Map();
+  let stopModel = () => {};
+
+  function renderFeedback() {
+    const feedback = steps[step].querySelector('[role="status"]');
+    const response = responses.get(step);
+    if (feedback) feedback.textContent = response ? feedbackCopy[response][language] : '';
+  }
+
+  function setLanguage(nextLanguage) {
+    language = nextLanguage;
+    document.documentElement.lang = language === 'jp' ? 'ja' : 'en';
+    languageButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+    });
+    try { localStorage.setItem('hsd-landing-lang', language); } catch {}
+    renderFeedback();
+  }
+
+  function showStep(nextStep, heading) {
+    audio.pause();
+    stopModel();
+    steps[step].hidden = true;
+    step = nextStep;
+    steps[step].hidden = false;
+    renderFeedback();
+    (heading ?? steps[step].querySelector('h1, h2')).focus();
+  }
+
+  let savedLanguage;
+  try { savedLanguage = localStorage.getItem('hsd-landing-lang'); } catch {}
+  setLanguage(savedLanguage === 'en' || savedLanguage === 'jp'
+    ? savedLanguage
+    : navigator.language.toLowerCase().startsWith('ja') ? 'jp' : 'en');
+  languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+  document.querySelector('#languages').hidden = false;
+
+  document.querySelectorAll('[data-next]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => showStep(step + 1));
+  });
+  document.querySelectorAll('[data-apps]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      returnStep = step;
+      const heading = button.dataset.apps
+        ? document.querySelector(`#apps-${button.dataset.apps} h3`)
+        : null;
+      showStep(steps.length - 1, heading);
+    });
+  });
+  document.querySelector('#return-to-demo').addEventListener('click', () => showStep(returnStep));
+  document.querySelector('#hear-word').addEventListener('click', async () => {
+    try {
+      audio.currentTime = 0;
+      await audio.play();
+    } catch (error) {
+      if (error.name === 'AbortError' || step !== 1) return;
+      responses.set(step, 'audio');
+      renderFeedback();
+    }
+  });
+  document.querySelectorAll('[data-feedback]').forEach((button) => {
+    button.addEventListener('click', () => {
+      responses.set(step, button.dataset.feedback);
+      renderFeedback();
+    });
+  });
+  document.querySelectorAll('[data-hear]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const synth = window.speechSynthesis;
+      const voice = synth?.getVoices().find((candidate) => candidate.localService && /^en(?:-|$)/i.test(candidate.lang));
+      if (!voice) {
+        responses.set(step, 'modelUnavailable');
+        renderFeedback();
+        return;
+      }
+      const model = new SpeechSynthesisUtterance(button.dataset.hear);
+      model.voice = voice;
+      model.lang = voice.lang;
+      model.rate = 0.9;
+      const modelStep = step;
+      model.onerror = ({error}) => {
+        if (step !== modelStep || error === 'interrupted' || error === 'canceled') return;
+        responses.set(step, 'modelUnavailable');
+        renderFeedback();
+      };
+      synth.cancel();
+      stopModel = () => synth.cancel();
+      synth.speak(model);
+    });
+  });
+  document.querySelector('#replay').addEventListener('click', () => {
+    responses.clear();
+    showStep(0);
+  });
+</script>
+</body>
+</html>

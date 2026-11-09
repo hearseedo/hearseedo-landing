@@ -7,5 +7,6 @@ rm -rf _site && mkdir -p _site/.well-known _site/demo
 cp index.html terms.html privacy.html about-jona.html explainer.mp4 robots.txt _headers _site/
 cp -R images _site/images
 cp demo/index.html demo/emma.webp demo/jona.webp demo/frog.mp3 _site/demo/
+cp demo/pathway-{family,students,adults,educators}.webp _site/demo/
 cp .well-known/security.txt _site/.well-known/
 echo "built _site: $(find _site -type f | wc -l | tr -d ' ') files, $(du -sh _site | cut -f1)"
