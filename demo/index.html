@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Try Hear See Do Online across three everyday moments for children, students, and adults.">
+<title>Hear See Do Online | Confidence First Learning Demo</title>
+<style>
+  :root { color-scheme: dark; font: 100%/1.6 system-ui, sans-serif; color: #fff6e6; background: #10172a; }
+  * { box-sizing: border-box; }
+  [hidden], html[lang="en"] .jp, html[lang="ja"] .en { display: none !important; }
+  body { margin: 0; background: radial-gradient(ellipse at top, #263b5a, transparent 65%); min-height: 100vh; }
+  header, main { width: min(100% - 2rem, 52rem); margin: auto; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: 1rem 0; }
+  header a { color: inherit; font-weight: 800; }
+  main { padding: 1rem 0 2rem; }
+  section { border: 1px solid #536585; background: #151f34; border-radius: 1.5rem; padding: clamp(1.2rem, 5vw, 2.8rem); }
+  h1, h2 { line-height: 1.15; margin: 0 0 1rem; font-size: clamp(1.9rem, 6vw, 3.2rem); text-wrap: balance; }
+  p { margin: 0 0 1rem; max-width: 46ch; }
+  .eyebrow { color: #ffda85; font-weight: 800; margin-bottom: .6rem; }
+  .muted { color: #d1daec; }
+  .scene { display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+  .scene img { width: 100%; height: 12rem; object-fit: contain; }
+  .actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+  button, .button { cursor: pointer; display: inline-block; font: inherit; font-weight: 750; border: 1px solid #8394b1; border-radius: .7rem; padding: .55rem .85rem; color: inherit; background: #23324d; text-decoration: none; min-height: 44px; }
+  .primary { background: #ffda85; color: #1f1a10; border-color: #ffda85; }
+  button[aria-pressed="true"] { border-color: #ffda85; color: #ffda85; }
+  :focus-visible { outline: 3px solid #9be6ff; outline-offset: 4px; }
+  .word { display: block; font-size: 2.6rem; line-height: 1.3; font-weight: 800; }
+  .response { margin-top: 1rem; }
+  .response:empty { margin: 0; }
+  .activity { padding: 1rem 1.25rem; background: #23324d; border-radius: .8rem; margin-bottom: 1rem; }
+  .activity ol { padding-left: 1.4rem; margin: 0; }
+  .activity li + li { margin-top: .45rem; }
+  .pathway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; margin-bottom: 1rem; }
+  .pathway-card { background: #23324d; border-radius: .8rem; padding: 1rem; }
+  .pathway-card img { display: block; width: 100%; height: auto; border-radius: .55rem; }
+  .pathway-card h3 { margin: .75rem 0 .35rem; }
+  .pathway-card ul { padding-left: 1.25rem; }
+  .pathway-card li + li { margin-top: .4rem; }
+  .pathway-card a:not(.button) { color: #b8ecff; }
+  @media (max-width: 31rem) {
+    .scene { grid-template-columns: 1fr; }
+    .scene img { height: 8rem; justify-self: start; width: 7rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a href="/">Hear See Do Online<small style="display:block;font-size:10px;letter-spacing:.04em">Confidence First Learning</small></a>
+  <div id="languages" hidden>
+    <button type="button" data-lang="en" lang="en">EN</button>
+    <button type="button" data-lang="jp" lang="ja">日本語</button>
+  </div>
+</header>
+<main>
+  <section data-step>
+    <p class="eyebrow"><span class="en">Three ways to build speaking confidence</span><span class="jp" lang="ja">英語を話す自信を育てる3つの体験</span></p>
+    <div class="scene">
+      <div>
+        <h1 tabindex="-1"><span class="en">Learn at home with Hear See Do Online</span><span class="jp" lang="ja">Hear See Do Onlineで、おうちでも学びを。</span></h1>
+        <p class="en">Emma knows the word <em>frog</em>. When it’s time to say it out loud, she freezes. What would make it easier for her to try?</p>
+        <p class="jp" lang="ja">エマは「frog」という言葉を知っています。でも、声に出そうとすると、言葉が出てきません。どうすれば、少し気楽に挑戦できるでしょうか？</p>
+        <p class="muted"><span class="en">Start with Emma, then try an interview opener and a café order. Jona is the practice guide coming to Hear See Do Online.</span><span class="jp" lang="ja">エマの体験から始めて、面接の第一声とカフェでの注文にも挑戦しましょう。ジョナはHear See Do Onlineに登場予定の練習ガイドです。</span></p>
+      </div>
+      <img src="/demo/emma.webp" alt="" width="1024" height="1536">
+    </div>
+    <div class="actions">
+      <button type="button" class="primary" data-next hidden><span class="en">Start the demo</span><span class="jp" lang="ja">体験を始める</span></button>
+      <button type="button" data-apps hidden><span class="en">See pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></button>
+      <a class="button" href="/#founding"><span class="en">Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセス</span></a>
+    </div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Hear · See · Do</span><span class="jp" lang="ja">聞く・見る・やってみる</span></p>
+    <div class="scene">
+      <div>
+        <h2 tabindex="-1"><span class="en">One small try with Jona</span><span class="jp" lang="ja">ジョナと一緒に、小さな一歩</span></h2>
+        <p class="word"><span aria-hidden="true">🐸</span> <span lang="en">frog</span></p>
+        <p><span class="en">“Listen to the word, look at the frog, then try saying it out loud. Take your time.”</span><span class="jp" lang="ja">「言葉を聞いて、カエルを見て、声に出してみよう。ゆっくりでいいよ。」</span></p>
+      </div>
+      <img src="/demo/jona.webp" alt="" width="1024" height="1536">
+    </div>
+    <audio id="word-audio" src="/demo/frog.mp3" preload="none"></audio>
+    <button type="button" id="hear-word"><span class="en">▶ Hear “frog”</span><span class="jp" lang="ja">▶ 「frog」を聞く</span></button>
+    <div class="actions">
+      <button type="button" data-feedback="tried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="stuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+      <button type="button" class="primary" data-next><span class="en">See the family activity</span><span class="jp" lang="ja">おうちでの遊びを見る</span></button>
+    </div>
+    <p class="response" role="status"></p>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Try it together at home</span><span class="jp" lang="ja">おうちで一緒にやってみよう</span></p>
+    <h2 tabindex="-1"><span class="en">Take the frog off the screen</span><span class="jp" lang="ja">おうちでカエルごっこ</span></h2>
+    <p><span class="en">Here’s one way Emma and a parent can keep going. You can try it together, too.</span><span class="jp" lang="ja">エマとおうちの人は、こんなふうに練習を続けられます。ご家族でもやってみましょう。</span></p>
+    <div class="activity">
+      <ol>
+        <li><span class="en">Say <em>frog</em> once so your child can hear it.</span><span class="jp" lang="ja">まず、おうちの人が「frog」と言って、お子さんに聞かせます。</span></li>
+        <li><span class="en">Make a frog hop with two fingers and let your child copy you.</span><span class="jp" lang="ja">指を2本使ってカエルが跳ぶまねをし、お子さんにもまねしてもらいます。</span></li>
+        <li><span class="en">Take turns saying <em>frog</em> as your frog hops. Finish with “You gave it a try!”</span><span class="jp" lang="ja">カエルが跳ぶたびに、交代で「frog」と言ってみましょう。最後は「やってみたね！」と声をかけます。</span></li>
+      </ol>
+    </div>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">Try the student example</span><span class="jp" lang="ja">学生向けの体験へ</span></button> <button type="button" data-apps="family"><span class="en">See Family apps</span><span class="jp" lang="ja">ファミリー向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Students · An interview</span><span class="jp" lang="ja">学生 · 面接</span></p>
+    <h2 tabindex="-1"><span class="en">Find your first sentence</span><span class="jp" lang="ja">面接の第一声を練習しよう</span></h2>
+    <p><span class="en">Imagine you’ve just walked into an interview. The interviewer smiles and says, “Thanks for coming in.”</span><span class="jp" lang="ja">面接室に入ったところを想像してみましょう。面接官が笑顔で「来てくれてありがとう」と声をかけます。</span></p>
+    <div class="activity">
+      <p><strong lang="en">Thank you for having me.</strong><br><span class="jp" lang="ja">お招きいただき、ありがとうございます。</span></p>
+      <button type="button" data-hear="Thank you for having me."><span class="en">▶ Hear the opener</span><span class="jp" lang="ja">▶ 第一声を聞く</span></button>
+      <p class="response"><span class="en">Take a breath and say the first sentence out loud. Once it feels easier, add one thing you’d like the interviewer to know about you.</span><span class="jp" lang="ja">ひと呼吸おいて、最初の一文を声に出しましょう。慣れてきたら、面接官に知ってほしい自分のことを一つ付け加えてみましょう。</span></p>
+    </div>
+    <div class="actions">
+      <button type="button" data-feedback="studentTried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="studentStuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+    </div>
+    <p class="response" role="status"></p>
+    <p class="response"><strong class="en">Take it into real life.</strong><strong class="jp" lang="ja">実際に使ってみよう。</strong> <span class="en">Ask a friend, parent, or teacher to play the interviewer for one minute.</span><span class="jp" lang="ja">友だちやおうちの人、先生に、1分だけ面接官役をお願いしてみましょう。</span></p>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">Try the adult example</span><span class="jp" lang="ja">大人向けの体験へ</span></button> <button type="button" data-apps="student"><span class="en">See Student apps</span><span class="jp" lang="ja">学生向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow"><span class="en">Adults · At a café</span><span class="jp" lang="ja">大人 · カフェ</span></p>
+    <h2 tabindex="-1"><span class="en">Make the order your own</span><span class="jp" lang="ja">自分の注文を英語で伝えよう</span></h2>
+    <p><span class="en">You’re at the counter. The barista asks what you’d like. Start with one request.</span><span class="jp" lang="ja">カフェのカウンターで、店員さんに注文を聞かれました。まずは一つ、頼んでみましょう。</span></p>
+    <div class="activity">
+      <p><strong lang="en">Could I have a coffee, please?</strong><br><span class="jp" lang="ja">コーヒーを一杯お願いします。</span></p>
+      <button type="button" data-hear="Could I have a coffee, please?"><span class="en">▶ Hear the order</span><span class="jp" lang="ja">▶ 注文を聞く</span></button>
+      <p class="response"><span class="en">Say it once. Then swap in a drink you’d actually order and say it again.</span><span class="jp" lang="ja">まず一度、声に出しましょう。次に、自分が飲みたいものに替えて、もう一度言ってみましょう。</span></p>
+    </div>
+    <div class="actions">
+      <button type="button" data-feedback="adultTried"><span class="en">I tried it</span><span class="jp" lang="ja">やってみた</span></button>
+      <button type="button" data-feedback="adultStuck"><span class="en">I got stuck</span><span class="jp" lang="ja">うまく言えなかった</span></button>
+    </div>
+    <p class="response" role="status"></p>
+    <p class="response"><strong class="en">Take it into real life.</strong><strong class="jp" lang="ja">実際に使ってみよう。</strong> <span class="en">Practise with someone at home, then try your request the next time you can order in English.</span><span class="jp" lang="ja">おうちで誰かと練習して、次に英語で注文する機会があれば、使ってみましょう。</span></p>
+    <div class="actions"><button type="button" class="primary" data-next><span class="en">See what connects all three</span><span class="jp" lang="ja">3つの体験に共通すること</span></button> <button type="button" data-apps="adult"><span class="en">See Adult apps</span><span class="jp" lang="ja">大人向けアプリを見る</span></button></div>
+  </section>
+  <section data-step hidden>
+    <p class="eyebrow">Hear See Do Online</p>
+    <h2 tabindex="-1">Confidence First. Humanity Always.</h2>
+    <p><span class="en">A child says a word during play. A student opens an interview. An adult orders a drink. Each hears a model, sees where it fits, and tries one small step before using it with a real person.</span><span class="jp" lang="ja">子どもは遊びながら言葉を口にし、学生は面接の第一声を練習し、大人は飲み物を注文します。どの体験でも、まずお手本を聞き、使う場面を知り、小さく試してから、実際の会話で使ってみます。</span></p>
+    <div class="activity">
+      <p><strong class="en">Self-guided practice at home</strong><strong class="jp" lang="ja">おうちで自分のペースで練習</strong><br><span class="en">The planned Home Start membership covers one pathway. Home Family and Home Complete are planned to cover Kids, Student, and Adult practice, including Sip Speak Learn and the Confidence First series.</span><span class="jp" lang="ja">Home Startは、1つの学習コースをご利用いただける予定です。Home FamilyとHome Completeでは、子ども・学生・大人向けの練習に加え、Sip Speak LearnとConfidence Firstシリーズもご利用いただける予定です。</span></p>
+      <p><strong class="en">Supported courses for one learner</strong><strong class="jp" lang="ja">一人ひとりをサポートするコース</strong><br><span class="en">The planned Kids and Student Intensives, Sip Speak Learn, and Confidence First Blueprint are separate 12-week programmes. A monthly membership is optional.</span><span class="jp" lang="ja">子ども・学生向け集中コース、Sip Speak Learn、Confidence First Blueprintは、それぞれ別に申し込める12週間のコースを予定しています。月額会員への登録は任意です。</span></p>
+    </div>
+    <p class="muted"><span class="en">We’re starting with invitation-only Founding Family Access. More plans are coming.</span><span class="jp" lang="ja">まずは招待制の創設ファミリーアクセスから始まります。ほかのプランも今後ご案内します。</span></p>
+    <p class="muted"><span class="en">¥1,500 per month + ¥1,000 one-time setup for new accounts, tax included</span><span class="jp" lang="ja">月額 ¥1,500 ＋ 新規アカウントの初回設定費 ¥1,000（税込）</span></p>
+    <div class="actions">
+      <a class="button primary" href="/#founding"><span class="en">Request Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセスを申し込む</span></a>
+      <button type="button" data-apps><span class="en">See pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></button>
+      <button type="button" id="replay"><span class="en">Replay demo</span><span class="jp" lang="ja">もう一度体験する</span></button>
+    </div>
+  </section>
+  <section data-step id="app-guide" hidden>
+    <p class="eyebrow">Hear See Do Online</p>
+    <h2 tabindex="-1"><span class="en">Explore the pathways and apps</span><span class="jp" lang="ja">学習コースとアプリを見る</span></h2>
+    <p><span class="en">These cards show where each activity leads. App links require sign-in and access on your account. If you land on the sign-in screen, sign in and choose the pathway shown on the card.</span><span class="jp" lang="ja">各体験の続きは、下のカードでご案内します。アプリの利用にはログインとアカウントの利用権限が必要です。ログイン画面が開いたら、ログイン後にカードに記載された学習コースを選んでください。</span></p>
+    <div class="pathway-grid">
+      <article class="pathway-card" id="apps-family">
+        <img src="/demo/pathway-family.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Kids &amp; Family</span><span class="jp" lang="ja">子ども・ファミリー</span></h3>
+        <p class="eyebrow"><span class="en">Invitation-only Family beta</span><span class="jp" lang="ja">招待制ファミリーベータ</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/family/activity/hear-phonics-app">Monkey Yoga Phonics™</a><span class="en"> — sounds, words, and movement, like the frog activity.</span><span class="jp" lang="ja"> — カエルの体験のように、音や言葉を体の動きと一緒に練習します。</span></li>
+          <li><strong>Monkeys Talk &amp; Unlock™</strong><span class="en"> — a preview of guided speaking practice. Check your invitation for availability.</span><span class="jp" lang="ja"> — ガイド付きスピーキング練習のプレビューです。利用可否は招待の案内をご確認ください。</span></li>
+        </ul>
+        <a class="button" href="https://app.hsdos.ai/family"><span class="en">Open the Family pathway</span><span class="jp" lang="ja">ファミリーコースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-student">
+        <img src="/demo/pathway-students.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Student</span><span class="jp" lang="ja">学生</span></h3>
+        <p class="eyebrow"><span class="en">Private beta · Account access required</span><span class="jp" lang="ja">プライベートベータ · 利用権限が必要</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/career-ready">Career Ready</a><span class="en"> — interview and career practice.</span><span class="jp" lang="ja"> — 面接や進路に向けた練習。</span></li>
+          <li><a href="https://app.hsdos.ai/global-ready">Global Ready</a><span class="en"> — English for studying abroad and international life.</span><span class="jp" lang="ja"> — 留学や海外生活のための英語。</span></li>
+          <li><a href="https://app.hsdos.ai/speak-ready">Speak Ready</a><span class="en"> — guided speaking practice.</span><span class="jp" lang="ja"> — ガイド付きスピーキング練習。</span></li>
+          <li><strong>EIKEN Monkey</strong><span class="en"> — choose EIKEN from Student Home.</span><span class="jp" lang="ja"> — 学生ホームから英検を選びます。</span></li>
+        </ul>
+        <a class="button" href="https://app.hsdos.ai/student"><span class="en">Open the Student pathway</span><span class="jp" lang="ja">学生コースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-adult">
+        <img src="/demo/pathway-adults.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Adult</span><span class="jp" lang="ja">大人</span></h3>
+        <p class="eyebrow"><span class="en">Private beta · Account access required</span><span class="jp" lang="ja">プライベートベータ · 利用権限が必要</span></p>
+        <ul>
+          <li><a href="https://app.hsdos.ai/sip-speak-learn">Sip Speak Learn</a><span class="en"> — self-guided everyday conversation, like the café order.</span><span class="jp" lang="ja"> — カフェでの注文など、日常会話を自分のペースで練習。</span></li>
+          <li><strong>Confidence First</strong><span class="en"> — the self-guided series is planned for Home Family and Home Complete.</span><span class="jp" lang="ja"> — 自習用シリーズはHome FamilyとHome Completeで提供予定です。</span></li>
+        </ul>
+        <p class="muted"><span class="en">Other summit previews included The Inner Key Blueprint, Speak &amp; Sweat, and Breath &amp; Speak. Check your account for access.</span><span class="jp" lang="ja">サミットではThe Inner Key Blueprint、Speak &amp; Sweat、Breath &amp; Speakも紹介しました。利用可否はアカウントでご確認ください。</span></p>
+        <a class="button" href="https://app.hsdos.ai/adult"><span class="en">Open the Adult pathway</span><span class="jp" lang="ja">大人向けコースを開く</span></a>
+      </article>
+      <article class="pathway-card" id="apps-educator">
+        <img src="/demo/pathway-educators.webp" alt="" width="480" height="320">
+        <h3 tabindex="-1"><span class="en">Educator</span><span class="jp" lang="ja">教育関係者</span></h3>
+        <p class="eyebrow"><span class="en">Separate access for educators</span><span class="jp" lang="ja">教育関係者向けの別枠アクセス</span></p>
+        <p><span class="en">Seasonal lessons, curriculum, and classroom resources. Educator access is separate from Home memberships.</span><span class="jp" lang="ja">季節のレッスン、カリキュラム、授業用教材を提供します。教育関係者向けの利用枠はHome会員とは別です。</span></p>
+        <a class="button" href="https://app.hsdos.ai/educator"><span class="en">Open the Educator pathway</span><span class="jp" lang="ja">教育関係者向けコースを開く</span></a>
+      </article>
+    </div>
+    <p class="muted"><span class="en">HSD Playroom is being tested separately. The founding invitation explains the apps included on your account before you pay.</span><span class="jp" lang="ja">HSD Playroomは別途テスト中です。お支払い前に、ご利用いただけるアプリを招待のご案内でお知らせします。</span></p>
+    <div class="actions">
+      <button type="button" class="primary" id="return-to-demo"><span class="en">Back to the walkthrough</span><span class="jp" lang="ja">体験に戻る</span></button>
+      <a class="button" href="https://app.hsdos.ai/"><span class="en">Sign in to Hear See Do Online</span><span class="jp" lang="ja">Hear See Do Onlineにログイン</span></a>
+      <a class="button" href="/#founding"><span class="en">Request Founding Family Access</span><span class="jp" lang="ja">創設ファミリーアクセスを申し込む</span></a>
+    </div>
+  </section>
+</main>
+<script>
+  const steps = Array.from(document.querySelectorAll('[data-step]'));
+  const languageButtons = Array.from(document.querySelectorAll('[data-lang]'));
+  const audio = document.querySelector('#word-audio');
+  const feedbackCopy = {
+    tried: { en: 'You gave it a go! How did that feel?', jp: 'やってみたね！どんな気持ちだった？' },
+    stuck: { en: 'Take your time. You can listen again or try the activity together.', jp: 'ゆっくりで大丈夫。もう一度聞いてもいいし、おうちの人と一緒にやってみてもいいよ。' },
+    studentTried: { en: 'You started the conversation. What would you want them to know about you next?', jp: '会話を始められたね。次は、自分のどんなことを伝えたい？' },
+    studentStuck: { en: 'Start with “Thank you.” Add the rest when you feel ready.', jp: 'まずは「Thank you」から。言えそうになったら、続きを足してみよう。' },
+    adultTried: { en: 'You made a request. Try it once with your usual order.', jp: '注文できたね。今度は、いつも頼むもので言ってみよう。' },
+    adultStuck: { en: 'Try “A coffee, please.” You can build up to the longer version.', jp: 'まずは「A coffee, please.」で大丈夫。慣れたら、長い言い方も試してみよう。' },
+    modelUnavailable: { en: 'Ask someone to read the line aloud, or read it once before you try.', jp: '誰かに読んでもらうか、自分で一度読んでから言ってみましょう。' },
+    audio: { en: 'The audio is unavailable. You can say “frog” together and keep going.', jp: '音声を再生できません。一緒に「frog」と言って、次に進めます。' }
+  };
+  let step = 0;
+  let returnStep = 0;
+  let language = 'en';
+  const responses = new Map();
+  let stopModel = () => {};
+
+  function renderFeedback() {
+    const feedback = steps[step].querySelector('[role="status"]');
+    const response = responses.get(step);
+    if (feedback) feedback.textContent = response ? feedbackCopy[response][language] : '';
+  }
+
+  function setLanguage(nextLanguage) {
+    language = nextLanguage;
+    document.documentElement.lang = language === 'jp' ? 'ja' : 'en';
+    languageButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+    });
+    try { localStorage.setItem('hsd-landing-lang', language); } catch {}
+    renderFeedback();
+  }
+
+  function showStep(nextStep, heading) {
+    audio.pause();
+    stopModel();
+    steps[step].hidden = true;
+    step = nextStep;
+    steps[step].hidden = false;
+    renderFeedback();
+    (heading ?? steps[step].querySelector('h1, h2')).focus();
+  }
+
+  let savedLanguage;
+  try { savedLanguage = localStorage.getItem('hsd-landing-lang'); } catch {}
+  setLanguage(savedLanguage === 'en' || savedLanguage === 'jp'
+    ? savedLanguage
+    : navigator.language.toLowerCase().startsWith('ja') ? 'jp' : 'en');
+  languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+  document.querySelector('#languages').hidden = false;
+
+  document.querySelectorAll('[data-next]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => showStep(step + 1));
+  });
+  document.querySelectorAll('[data-apps]').forEach((button) => {
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      returnStep = step;
+      const heading = button.dataset.apps
+        ? document.querySelector(`#apps-${button.dataset.apps} h3`)
+        : null;
+      showStep(steps.length - 1, heading);
+    });
+  });
+  document.querySelector('#return-to-demo').addEventListener('click', () => showStep(returnStep));
+  document.querySelector('#hear-word').addEventListener('click', async () => {
+    try {
+      audio.currentTime = 0;
+      await audio.play();
+    } catch (error) {
+      if (error.name === 'AbortError' || step !== 1) return;
+      responses.set(step, 'audio');
+      renderFeedback();
+    }
+  });
+  document.querySelectorAll('[data-feedback]').forEach((button) => {
+    button.addEventListener('click', () => {
+      responses.set(step, button.dataset.feedback);
+      renderFeedback();
+    });
+  });
+  document.querySelectorAll('[data-hear]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const synth = window.speechSynthesis;
+      const voice = synth?.getVoices().find((candidate) => candidate.localService && /^en(?:-|$)/i.test(candidate.lang));
+      if (!voice) {
+        responses.set(step, 'modelUnavailable');
+        renderFeedback();
+        return;
+      }
+      const model = new SpeechSynthesisUtterance(button.dataset.hear);
+      model.voice = voice;
+      model.lang = voice.lang;
+      model.rate = 0.9;
+      const modelStep = step;
+      model.onerror = ({error}) => {
+        if (step !== modelStep || error === 'interrupted' || error === 'canceled') return;
+        responses.set(step, 'modelUnavailable');
+        renderFeedback();
+      };
+      synth.cancel();
+      stopModel = () => synth.cancel();
+      synth.speak(model);
+    });
+  });
+  document.querySelector('#replay').addEventListener('click', () => {
+    responses.clear();
+    showStep(0);
+  });
+</script>
+</body>
+</html>
