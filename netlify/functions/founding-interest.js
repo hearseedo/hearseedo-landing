@@ -63,7 +63,7 @@ exports.handler = async (event) => {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: "HSDOS.AI Founding <survey@hsdos.ai>",
+        from: "Hear See Do Online Founding <survey@hsdos.ai>",
         to: [OWNER],
         reply_to: email,
         subject: `Founding Family Access request — ${name}`,
