@@ -20,10 +20,11 @@ test("security headers are present", () => {
 test("security.txt and robots.txt are published", () => {
   assert(files.includes(".well-known/security.txt")); assert(files.includes("robots.txt"));
 });
+// /demo is a public, unguarded route on app.hsdos.ai (2026-11-25), so the landing page may link to it. /founding stays blocked here.
 test("pages never send visitors into the password-protected app checkout", () => {
   for (const f of ["index.html", "terms.html", "privacy.html", "about-jona.html"]) {
     const t = fs.readFileSync(path.join(site, f), "utf8");
-    assert(!/app\.hsdos\.ai\/(founding|demo)/.test(t), f + " links into the locked app");
+    assert(!/app\.hsdos\.ai\/founding/.test(t), f + " links into the locked app");
   }
 });
 test("every local file a page references exists in the bundle", () => {

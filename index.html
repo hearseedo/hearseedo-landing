@@ -292,12 +292,6 @@
   .footer-social a { color: var(--dim); text-decoration: none; font-size: 11.5px; }
   .footer-copy { font-size: 10.5px; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; }
 
-  /* ── VIDEO LIGHTBOX ── */
-  .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; padding: 24px; }
-  .lightbox.open { display: flex; }
-  .lightbox-inner { width: 100%; max-width: 960px; position: relative; }
-  .lightbox video { width: 100%; border-radius: 14px; display: block; }
-  .lightbox-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 22px; cursor: pointer; }
 
   .divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 48px; }
 
@@ -454,7 +448,7 @@
       <button class="lang-btn on" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-jp" onclick="setLang('jp')">日本語</button>
     </div>
-    <a href="https://hsdos-demo.netlify.app/demo" class="btn-login demo-link"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
+    <a href="https://app.hsdos.ai/demo" class="btn-login demo-link"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
     <a href="https://app.hsdos.ai" class="btn-login"><span class="en">Login</span><span class="jp">ログイン</span></a>
     <button type="button" class="btn-red js-request-access"><span class="en">Request Access</span><span class="jp">申し込む</span></button>
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileNav()">
@@ -469,7 +463,7 @@
   <a href="#how-it-works" onclick="toggleMobileNav()"><span class="en">How It Works</span><span class="jp">仕組み</span></a>
   <a href="#membership" onclick="toggleMobileNav()"><span class="en">Membership</span><span class="jp">メンバーシップ</span></a>
   <a href="#founder" onclick="toggleMobileNav()"><span class="en">About</span><span class="jp">について</span></a>
-  <a href="https://hsdos-demo.netlify.app/demo"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
+  <a href="https://app.hsdos.ai/demo"><span class="en">Try the Demo</span><span class="jp">デモを試す</span></a>
   <a href="https://app.hsdos.ai"><span class="en">Login</span><span class="jp">ログイン</span></a>
 </div>
 
@@ -802,7 +796,7 @@
     </h2>
     <div class="hero-ctas" style="justify-content:center;">
       <a href="#family-pathways" class="btn-gold"><span class="en">Explore learning for your family</span><span class="jp">ご家族の学びを見る</span></a>
-      <a href="https://hsdos-demo.netlify.app/demo" class="btn-ghost">
+      <a href="https://app.hsdos.ai/demo" class="btn-ghost">
         <span class="en">Try the Demo</span><span class="jp">デモを試す</span>
       </a>
     </div>
@@ -826,16 +820,6 @@
   </div>
   <div class="footer-copy">HEAR SEE DO™ · Online · Nagoya, Japan · © <span id="year"></span></div>
 </footer>
-
-<!-- ── VIDEO LIGHTBOX (explainer.mp4) ── -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="How Hear See Do Online works">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close video">✕</button>
-    <video id="explainerVideo" controls playsinline>
-      <source src="explainer.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
 
 <script>
 // ── STARFIELD ──
@@ -890,22 +874,6 @@ function toggleMobileNav(){
   var open = nav.classList.toggle('open');
   btn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
-
-// ── VIDEO LIGHTBOX ──
-function openLightbox(){
-  document.getElementById('lightbox').classList.add('open');
-  document.getElementById('explainerVideo').play().catch(function(){});
-}
-function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('open');
-  document.getElementById('explainerVideo').pause();
-}
-document.getElementById('lightbox').addEventListener('click', function(e){
-  if (e.target.id === 'lightbox') closeLightbox();
-});
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') closeLightbox();
-});
 
 // ── SCROLL REVEAL (method section) — respects prefers-reduced-motion via CSS ──
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
